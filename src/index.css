@@ -1,0 +1,131 @@
+/* 공통 */
+.tC{text-align: center;}
+img {
+  max-width: 100%;
+  max-height: 100%;
+  border: 0 none;
+  /* vertical-align: top; */
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color:powderblue;
+}
+
+/* 1. 네비게이션 */
+a{text-decoration: none;}
+nav{background: navy; padding: 10px 10px; display: flex;
+  justify-content: center;}
+nav a{color: #fff; font-size: 17px; border-right: 1px solid; padding: 0 10px;}
+nav a:first-child{border-left: 0; padding-left: 0;}
+nav a:last-child{border-right: 0; padding-right: 0;}
+
+/* 2.투두리스트 */
+.todo{background: rgb(255, 255, 227); padding: 25px 20px; width: 100%; max-width: 390px; margin: 30px auto 0; border-radius: 5px; box-shadow: 5px 5px 20px -10px; text-align: left;}
+h2{border-bottom: 1px solid;padding-bottom: 10px;margin-bottom: 10px; font-size: 30px;}
+.allDel{float: right; font-size: 13px; background-color: #000; color: #fff; border: 1px solid #fff; border-radius: 5px; padding: 5px;
+transform: translateY(9px); cursor: pointer;}
+.allDel:hover{color: #000; background: #fff; border: 1px solid ;}
+
+input{height: 25px; display: inline-block; vertical-align: middle; }
+input[type="button"]{height: 30px;}
+
+.todo a{color: #fff;}
+.todo > .inputBox{
+  display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.todo > div > input{width: 67%;}
+.todo > div > input+input{width: 30%; height: 31px;}
+
+.todo div div{margin-top: 10px; padding-top: 10px; border-top: 1px solid #000;}
+.todo ul{
+    /* border: 1px solid #000; */
+    /* border-radius: 5px; */
+    background-color:  rgb(194 172 132);
+    padding-left: 0;
+    max-height: 338px;
+    overflow-y: auto;
+}
+/* ul li:first-child{border-top: 0;} */
+.todo ul li{
+    border-top:0;
+    position: relative;
+    min-height: 16px;
+    padding: 15px;
+    list-style: none;
+    border: 0;
+    color: #fff;
+}
+.todo ul li + li{border-top: 1px solid #777;}
+.todo ul li:first-child{border: 0;}
+.todo ul li span{ display: inline-block; word-break: break-all; width: 96%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;}
+  .todo ul li b{position: absolute; right: 5px; top: 50%; transform: translateY(-50%); cursor:pointer; font-size: 27px;} 
+
+
+/* 3. 쇼핑몰*/
+.sh_list{display: flex; justify-content: space-evenly;}
+.sh_list li{width: 25%;}
+.sh_list li img{border-radius: 10px;}
+.sh_txt{text-align: center; margin-top: 10px;}
+.sh_txt p{padding: 10px 0;}
+.sh_txt h4{font-size: 23px; font-weight: 500;}
+
+
+/* 4. 모달창 */
+.modal{
+  position:absolute;
+  /* display:none; */
+  justify-content: center;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal_body{
+  position:absolute;
+  top:33%; 
+  left: 50%;
+  width:400px;  
+  height:300px; 
+  padding:40px;  
+  text-align: center;
+  background-color: rgb(255,255,255); 
+  border-radius:10px; 
+  box-shadow:0 2px 3px 0 rgba(34,36,38,0.15); 
+  transform:translate(-50%, -50%); 
+}
+
+.modal_body h2{position: relative;}
+.modal_body h2 span{position: absolute; right: 0; top: 0; cursor: pointer;}
+
+/* 5.영화 */
+.movie_area{display: flex;     flex-wrap: wrap;}
+.movie_area li{
+  width: 21%;
+    margin: 2%;
+    text-align: center;
+}
+.movie_area li a{font-size: 21px; display: block;}
+
+@media all and (max-width:479px) {
+  /* 날씨 */
+  .sc-dAlxHm.eiUiVa{
+    width: 320px;
+  }  
+}
+
+
+
