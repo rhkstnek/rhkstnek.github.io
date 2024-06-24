@@ -19,10 +19,25 @@ function Mdetail() {
 
   return (
     <div className='tC'>
-      <img src={cinema.large_cover_image} />
-      {/* {cinema.id} */}
-      <br/><br/>
-      <div>{cinema.description_intro}</div>
+      <div className='md_box'>
+        <img src={cinema.large_cover_image} />
+        <ul>
+          <li><span>{cinema.title}</span></li>
+          <li>
+            {/* 장르 : {cinema.genres.map((aa,ii)=>{
+              return(
+                <>
+                  {cinema.genres[ii]},
+                </>
+              )
+            })} */}
+            <em>genres</em> : {cinema.genres}
+          </li>
+          <li><em>runtime</em> : {cinema.runtime}</li>
+          <li><em>rating</em> : {cinema.rating}</li>
+          <li><em>info</em><br/><br/>{cinema.description_intro}</li>
+        </ul>
+      </div>
     </div>
   )
 }

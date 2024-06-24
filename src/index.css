@@ -96,6 +96,7 @@ input[type="button"]{height: 30px;}
 
 .modal_body{
   position:absolute;
+  display: block;
   top:33%; 
   left: 50%;
   width:400px;  
@@ -114,17 +115,72 @@ input[type="button"]{height: 30px;}
 /* 5.영화 */
 .movie_area{display: flex;     flex-wrap: wrap;}
 .movie_area li{
-  width: 21%;
-    margin: 2%;
+  width: 18%;
+    margin: 2% 1% 1%;
     text-align: center;
+    transition: 0.5s;
 }
-.movie_area li a{font-size: 21px; display: block;}
+.movie_area li img{transition: all 0.5s;}
+.movie_area li img:hover{transform: scale(1.1); }
+.mvd{overflow: hidden;}
+.movie_area li a{font-size: 21px; display: block; }
+.movie_area li p{margin-top: 10px;}
+
+.md_box {
+  display: flex;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.md_box img{width: 30%;}
+.md_box ul{width: 65%;}
+.md_box ul li{margin: 25px 0; text-align: left; word-break: keep-all;}
+.md_box ul li em{font-size: 20px; font-weight: 500;}
+.md_box ul li span{font-weight: bold; font-size: 30px;}
+
+/* 6.팀원정하기 */
+.teamOne{font-size: 25px;}
+.team_area{
+  background-image: -webkit-linear-gradient(-25deg, #c85e5e 50%, #3578b6 50%);
+  max-width: 450px; margin: 0 auto; color: #fff; display: flex; border-radius: 10px;
+  height: 200px;
+  align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: relative;
+}
+.team_area::after{
+  content: "VS";
+  clear: both;
+  position: absolute;
+  left:50%; top: 50%;
+  color: #000;
+  font-weight: bold;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+.team_area p{font-size: 30px; background-color: rgba(255, 255, 255, 0.2); 
+  
+border-radius: 50%; padding: 54px 45.33px; 
+}
+.team_a{margin-right: 10px;}
+.team_b{margin-left: 10px;}
+
 
 @media all and (max-width:479px) {
   /* 날씨 */
   .sc-dAlxHm.eiUiVa{
     width: 320px;
   }  
+
+  /* 5.영화 */
+  .movie_area li{width: 48%; }
+  .movie_area li p{margin-bottom: 20px; margin-top: 5px; font-size: 16px; font-weight: 500;}
+
 }
 
 

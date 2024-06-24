@@ -8,6 +8,7 @@ import Six from './page/six.js';
 // import Detail from './page/detail.js';
 import Last from './page/last.js';
 import Mdetail from './page/mdetail.js';
+import Seven from './page/seven.js';
 
 
 
@@ -27,8 +28,7 @@ function App() {
         <Link to="/four">할일</Link>
         <Link to="/five">코인</Link>
         <Link to="/six">영화</Link>
-        <Link to="/seven">7번째</Link>
-        <Link to="/eight">8번째</Link>
+        <Link to="/seven">팀원</Link>
         <Link to="/Last">날씨</Link>
       </nav>
 
@@ -51,6 +51,8 @@ function App() {
         <Route path="/Six" element={<Six  />}>
         </Route>
         <Route path="/Mdetail/:id" element={<Mdetail />} />
+        <Route path="/Seven" element={<Seven  />}/>
+        
 
         
         <Route path="/Last" element={<Last />} />

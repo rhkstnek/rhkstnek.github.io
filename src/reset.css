@@ -84,3 +84,7 @@ hr {
 input, select {
     vertical-align:middle;
 }
+
+p{
+    margin: 0; padding: 0; border: 0;
+}
