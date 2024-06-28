@@ -54,6 +54,7 @@ const CityComponent = (props) => {
         />
         <button type={"submit"}>Search</button>
       </SearchBox>
+        <p style={{color:`red`,fontWeight:'600'}}>ex) seoul, paris, italy</p>
     </>
   );
 };

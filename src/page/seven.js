@@ -31,7 +31,7 @@ function Seven() {
 
   return(
     <div className="tC">
-      <button onClick={output}>팀 정하기</button> ← 클릭
+      <button onClick={output}>그룹원 정하기</button> ← 클릭
       <br/><br/>
       <span className="teamOne">인원: 
       {soccer.map((a,i)=>{

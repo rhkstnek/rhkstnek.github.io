@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Routes, Route, Link } from 'react-router-dom';
+import One from './page/one.js';
 import Two from './page/two.js';
 // import Three from './page/three.js';
 import Four from './page/four.js';
@@ -9,6 +10,7 @@ import Six from './page/six.js';
 import Last from './page/last.js';
 import Mdetail from './page/mdetail.js';
 import Seven from './page/seven.js';
+import Eight from './page/eight.js';
 
 
 
@@ -23,12 +25,14 @@ function App() {
     <div>
       <nav style={{ marginBottom: '25px' }}>
         <Link to="/">홈</Link>
+        <Link to="/one">소개</Link>
         <Link to="/two">모달</Link>
         {/* <Link to="/three">쇼핑몰</Link> */}
         <Link to="/four">할일</Link>
         <Link to="/five">코인</Link>
         <Link to="/six">영화</Link>
-        <Link to="/seven">팀원</Link>
+        <Link to="/seven">그룹</Link>
+        <Link to="/eight">게임</Link>
         <Link to="/Last">날씨</Link>
       </nav>
 
@@ -41,6 +45,7 @@ function App() {
             </div>
           </>
         } />
+        <Route path="/one" element={<One/>}  />
         <Route path="/two" element={<Two rhkstn={rhkstn}/>}  />
         {/* <Route path="/three" element={ <div><ul className="sh_list"><Three 
         /></ul></div> } >
@@ -52,6 +57,7 @@ function App() {
         </Route>
         <Route path="/Mdetail/:id" element={<Mdetail />} />
         <Route path="/Seven" element={<Seven  />}/>
+        <Route path="/Eight" element={<Eight  />}/>
         
 
         
