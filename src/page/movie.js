@@ -2,7 +2,7 @@ import axios from "axios"
 import { useState, useEffect } from "react"
 import { Link, useParams } from 'react-router-dom';
 
-function Six() {
+function Movie() {
   let [movie, setMovie] = useState([])
   let [start, setStart] = useState(false)
   
@@ -23,6 +23,8 @@ function Six() {
     <div>
       <div>
         {start != ''?  
+          <div className="movie_wrap">
+          <p className="">Movie List</p>
           <ul className="movie_area">
           {movie.map((a, i) => {
             let kk = movie[i].id
@@ -39,11 +41,17 @@ function Six() {
               </li>
             )
           })}
-        </ul> : <div className="tC"><img style={{width:'40%'}} src={process.env.PUBLIC_URL + `/img/loading2.png`} alt='loading' /></div>
+        </ul>
+          <div className="page">
+            <Link to="" >1</Link>
+            <Link to="" >2</Link>
+          </div>
+        </div> 
+        : <div className="movie_loading"><img style={{width:'40%'}} src={process.env.PUBLIC_URL + `/img/loading2.png`} alt='loading' /></div>
         }
       </div>
       
     </div>
   )
 }
-export default Six
+export default Movie

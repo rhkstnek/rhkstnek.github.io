@@ -8,37 +8,44 @@ function Mdetail() {
   const { id } = useParams()
   // console.log(id)
   useEffect(() => {
+    
+    
     axios.get(`https://yts.mx/api/v2/movie_details.json?movie_id=
     ${id}`)
       .then((kill) => {
         console.log(kill)
         setCinema(kill.data.data.movie)
-
       })
   }, [])
 
+  
+
   return (
-    <div className='tC'>
-      <div className='md_box'>
-        <img src={cinema.large_cover_image} />
-        <ul>
-          <li><span>{cinema.title}</span></li>
-          <li>
-            {/* 장르 : {cinema.genres.map((aa,ii)=>{
-              return(
-                <>
-                  {cinema.genres[ii]},
-                </>
-              )
-            })} */}
-            <em>genres</em> : {cinema.genres}
-          </li>
-          <li><em>runtime</em> : {cinema.runtime}</li>
-          <li><em>rating</em> : {cinema.rating}</li>
-          <li><em>info</em><br/><br/>{cinema.description_intro}</li>
-        </ul>
-      </div>
+    <div className='md_wrap'>
+        <div className='md_box'>
+          <div>
+            <img src={cinema.large_cover_image} />
+            <a href='/movie'>⬅ 뒤로가기
+              
+            </a>
+            
+          </div>
+          <ul>
+            <li><span>{cinema.title}</span></li>
+            <li>
+              <em>genres</em> : {[cinema.genres].join(', ')}
+            </li>
+            <li><em>runtime</em> : {cinema.runtime}</li>
+            <li><em>rating</em> : {cinema.rating}</li>
+            <li><em>info</em><br/><br/>{cinema.description_intro}</li>
+          </ul>
+        </div>
     </div>
   )
 }
+
+function Kkk(){
+  return <div>치킨내놔</div>
+}
+
 export default Mdetail;

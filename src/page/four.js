@@ -8,18 +8,17 @@ function Four() {
 
   let fuc1 = (event) => {
     setId(event.target.value)
-    // event.target.value = '';
   }
 
   return (
     <div className="tC">
       <div className="todo">
-        <h2>To Do List<button className="allDel" onClick={(e)=>{
+        <h4>To Do List<button className="allDel" onClick={(e)=>{
           let copy3 = [] 
           // copy3 = []
           setTxt(copy3)
           ex.current.focus();
-        }}>전체삭제</button></h2>
+        }}>전체삭제</button></h4>
         
         <div className="inputBox">
           <input autoFocus type="text" value={idd} placeholder="할일 입력"

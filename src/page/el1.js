@@ -17,6 +17,7 @@ function El1() {
 
   return (
     <div className="tC">
+      <br/><br/>
       <input type="text" 
         onChange={inin} value={input1|| ''}
         // ref={bc} 
@@ -24,7 +25,7 @@ function El1() {
       /> <button onClick={()=>{
         dispatch(삽입(input1))
         setInput1('')
-        navigate('/eleven');
+        navigate('/board');
         // bc.current.focus();
       }}>입력</button>
     </div>

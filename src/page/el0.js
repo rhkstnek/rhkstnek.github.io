@@ -18,7 +18,7 @@ function El0() {
 
 
   //  목록
-  const moveList = () => { navigate('/eleven'); };
+  const moveList = () => { navigate('/board'); };
 
   return (
     <div className="tC">

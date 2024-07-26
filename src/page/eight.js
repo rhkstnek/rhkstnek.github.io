@@ -55,7 +55,7 @@ function Eight() {
 
     <div>
       <div className="tC" style={{ zoom: '1.1' }}>
-        <h3>가위바위보</h3><br/>
+        <h4>가위바위보</h4><br/>
         <div>
           <div className="team_area game1">
             <div >

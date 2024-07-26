@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 
 
 
-const Eleven = () => {
+const Board = () => {
   const bo = useSelector((state) => { return state })
 
   return (
     <div className="tC">
       <div className="list_wrap">
         <table className="list_area">
-          <caption>등업신청 게시판 (번호, 제목, 작성일)</caption>
+          <caption>등업신청 게시판 ( Redux Toolkit 활용 )</caption>
           <colgroup>
             <col style={{ width: '10%' }} />
             <col style={{ width: '*' }} />
@@ -47,4 +47,4 @@ const Eleven = () => {
 
 }
 
-export default Eleven;
+export default Board;

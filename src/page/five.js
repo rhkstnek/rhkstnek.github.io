@@ -26,9 +26,9 @@ function Five() {
 
   return (
     <div className="tC">
-      <h3 >코인정보입니다. ({coin.length})개</h3>
+      <h4 >코인정보입니다. ({coin.length})개</h4>
       <br/>
-      <h3>{now != '' ? `로딩중...` :
+      <div>{now != '' ? `로딩중...` :
         <select>
           {
             coin.map((a, i) =>
@@ -38,7 +38,7 @@ function Five() {
             )
           }
         </select>
-      }</h3>
+      }</div>
       {/* {console.log(coin)} */}
 
     </div>
