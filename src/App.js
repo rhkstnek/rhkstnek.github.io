@@ -52,7 +52,7 @@ function App() {
   // console.log(dimensions.divH2)
 
   useEffect(() => { //수치_업뎃
-    // window.scrollTo({ top: 0 })
+    window.scrollTo({ top: 0 })
     window.addEventListener('scroll', upSrc)
     // console.log(scr)
     // return () => window.removeEventListener('scroll', upSrc)
