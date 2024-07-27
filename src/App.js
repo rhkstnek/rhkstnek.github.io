@@ -19,6 +19,7 @@ import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
@@ -26,13 +27,18 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-cards';
+import 'swiper/css/free-mode';
+import 'swiper/css/thumbs';
+
 // Import Swiper modules
-import { Navigation, Pagination, EffectCards, A11y } from 'swiper/modules';
+import { Navigation, Pagination, EffectCards, A11y, FreeMode, Thumbs } from 'swiper/modules';
 
 
 
 
 function App() {
+  // swipwer
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   // 스크롤
   const [scr, setScr] = useState(0) //수치_저장
@@ -46,7 +52,7 @@ function App() {
   // console.log(dimensions.divH2)
 
   useEffect(() => { //수치_업뎃
-    window.scrollTo({ top: 0 })
+    // window.scrollTo({ top: 0 })
     window.addEventListener('scroll', upSrc)
     // console.log(scr)
     // return () => window.removeEventListener('scroll', upSrc)
@@ -215,65 +221,166 @@ function App() {
                 </div>
               </div>
 
-              <div className={scr > 2100 ? `wrap4 tC scrolled` : `wrap4 tC`}>
-                <h3>Hobby card</h3>
-                <div className="wrap4_area">
-                  <Swiper
-                    modules={[Navigation, Pagination, EffectCards, A11y]}
-                    // spaceBetween={10}
-                    // slidesPerView={1}
-                    // navigation
-                    // pagination={{ clickable: true }}
-                    
-                    effect={'cards'}
-                    grabCursor={true}
-        
+              <div className='wrap4 tC'>
+                <h2>PlayGround "<em >🎪</em>"</h2>
+                <div className={scr > 2300 ? `cont1 scrolled` : `cont1`}>
+                  <div className="hobby">
+                    <h3>Hobby card</h3>
+                    <Swiper
+                      modules={[Navigation, Pagination, EffectCards, A11y]}
+                      // spaceBetween={10}
+                      // slidesPerView={1}
+                      // navigation
+                      // pagination={{ clickable: true }}
+
+                      effect={'cards'}
+                      grabCursor={true}
+
                     // onSwiper={(swiper) => console.log(swiper)}
                     // onSlideChange={() => console.log('slide change')}
-                  >
-                    <SwiperSlide>
-                      <div className="card_top">A<br/>♥</div>
-                      <div className="card_img">
-                      <img src={process.env.PUBLIC_URL + `/img/hb1.png`} 
-                      alt="취미~" />
-                      </div>
-                      <div className="card_btm">A<br/>♥</div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="card_top">2<br/>♥</div>
-                      <div className="card_img">
-                      <img src={process.env.PUBLIC_URL + `/img/hb2.png`} 
-                      alt="취미~" />
-                      </div>
-                      <div className="card_btm">2<br/>♥</div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="card_top">3<br/>♥</div>
-                      <div className="card_img">
-                      <img src={process.env.PUBLIC_URL + `/img/hb3.png`} 
-                      alt="취미~" />
-                      </div>
-                      <div className="card_btm">3<br/>♥</div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="card_top">4<br/>♥</div>
-                      <div className="card_img">
-                      <img src={process.env.PUBLIC_URL + `/img/hb4.png`} 
-                      alt="취미~" />
-                      </div>
-                      <div className="card_btm">4<br/>♥</div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="card_top">5<br/>♥</div>
-                      <div className="card_img">
-                      <img src={process.env.PUBLIC_URL + `/img/hb5.png`} 
-                      alt="취미~" />
-                      </div>
-                      <div className="card_btm">5<br/>♥</div>
-                    </SwiperSlide>
-                  </Swiper>
+                    >
+                      <SwiperSlide>
+                        <div className="card_top">A<br />♥</div>
+                        <div className="card_img">
+                          <img src={process.env.PUBLIC_URL + `/img/hb1.png`}
+                            alt="취미~" />
+                        </div>
+                        <div className="card_btm">A<br />♥</div>
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <div className="card_top">2<br />♥</div>
+                        <div className="card_img">
+                          <img src={process.env.PUBLIC_URL + `/img/hb2.png`}
+                            alt="취미~" />
+                        </div>
+                        <div className="card_btm">2<br />♥</div>
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <div className="card_top">3<br />♥</div>
+                        <div className="card_img">
+                          <img src={process.env.PUBLIC_URL + `/img/hb3.png`}
+                            alt="취미~" />
+                        </div>
+                        <div className="card_btm">3<br />♥</div>
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <div className="card_top">4<br />♥</div>
+                        <div className="card_img">
+                          <img src={process.env.PUBLIC_URL + `/img/hb4.png`}
+                            alt="취미~" />
+                        </div>
+                        <div className="card_btm">4<br />♥</div>
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <div className="card_top">5<br />♥</div>
+                        <div className="card_img">
+                          <img src={process.env.PUBLIC_URL + `/img/hb5.png`}
+                            alt="취미~" />
+                        </div>
+                        <div className="card_btm">5<br />♥</div>
+                      </SwiperSlide>
+                    </Swiper>
+                  </div>
+                  <div className="series">
+                    <h3>Series</h3>
+                    <Swiper
+                      style={{
+                        '--swiper-navigation-color': '#fff',
+                        '--swiper-pagination-color': '#fff',
+                      }}
+                      loop={true}
+                      spaceBetween={50}
+                      navigation={true}
+                      thumbs={{ swiper: thumbsSwiper }}
+                      modules={[FreeMode, Navigation, Thumbs]}
+                      className="mySwiper2"
+                    >
+                      <SwiperSlide>
+                      <img src={process.env.PUBLIC_URL + `/img/hp1.png`}
+                            alt="해리시리즈" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                      <img src={process.env.PUBLIC_URL + `/img/hp2.png`}
+                            alt="해리시리즈" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                      <img src={process.env.PUBLIC_URL + `/img/hp3.png`}
+                            alt="해리시리즈" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                      <img src={process.env.PUBLIC_URL + `/img/hp4.png`}
+                            alt="해리시리즈" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                      <img src={process.env.PUBLIC_URL + `/img/hp5.png`}
+                            alt="해리시리즈" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                      <img src={process.env.PUBLIC_URL + `/img/hp6.png`}
+                            alt="해리시리즈" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                      <img src={process.env.PUBLIC_URL + `/img/hp7.png`}
+                            alt="해리시리즈" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                      <img src={process.env.PUBLIC_URL + `/img/hp8.png`}
+                            alt="해리시리즈" />
+                      </SwiperSlide>
+                    </Swiper>
+                    <Swiper 
+                      onSwiper={setThumbsSwiper}
+                      loop={true}
+                      spaceBetween={5}
+                      slidesPerView={5}
+                      freeMode={true}
+                      watchSlidesProgress={true}
+                      modules={[FreeMode, Navigation, Thumbs]}
+                      className="mySwiper"
+                    >
+                      <SwiperSlide>
+                      <img src={process.env.PUBLIC_URL + `/img/hp1.png`}
+                            alt="해리시리즈" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                      <img src={process.env.PUBLIC_URL + `/img/hp2.png`}
+                            alt="해리시리즈" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                      <img src={process.env.PUBLIC_URL + `/img/hp3.png`}
+                            alt="해리시리즈" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                      <img src={process.env.PUBLIC_URL + `/img/hp4.png`}
+                            alt="해리시리즈" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                      <img src={process.env.PUBLIC_URL + `/img/hp5.png`}
+                            alt="해리시리즈" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                      <img src={process.env.PUBLIC_URL + `/img/hp6.png`}
+                            alt="해리시리즈" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                      <img src={process.env.PUBLIC_URL + `/img/hp7.png`}
+                            alt="해리시리즈" />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                      <img src={process.env.PUBLIC_URL + `/img/hp8.png`}
+                            alt="해리시리즈" />
+                      </SwiperSlide>
+                    </Swiper>
+                  </div>
+                </div>
+
+                <div className="cont2">
+                  <h3>ing...</h3>
+                  <br/>
                 </div>
               </div>
+
+
 
               <div className="wrap0">
                 <div className="wrap0_area">

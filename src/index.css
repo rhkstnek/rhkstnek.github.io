@@ -44,7 +44,7 @@ body {
 .wrap1{color: #fff;}
 .first_top{padding-top: 100px;}
 .first_top h2{font-size: 50px;  }
-.first_top h2 em{
+h2 em{
   animation-name: ani0; 
   animation-iteration-count: infinite;
   animation-duration: 1.5s; 
@@ -144,16 +144,20 @@ transition: 0.3s; width: 116px; }
   font-weight: 600;
 }
 
-/* 취미 */
-.wrap4{margin-top: 80px; opacity: 0; transition: 0.5s;}
-.wrap4.scrolled{opacity: 1; transition: 1s;}
-.wrap4_area{max-width: 1024px; margin: 30px auto 50px; }
-.swiper {
-  width: 220px;
-  height: 300px;
+/* 놀이터 */
+.wrap4{margin-top: 150px; }
+.wrap4 h2{font-size: 50px;}
+
+.cont1{opacity: 0; transition: 0.3s; margin-top: 100px; 
+display: flex; justify-content: center; text-align: left;
+}
+.cont1 h3{margin-bottom: 30px;}
+.cont1.scrolled{
+  opacity: 1; transition: 0.5s;
 }
 
-.swiper-slide {
+.hobby .swiper { width: 220px; height: 300px; }
+.hobby .swiper-slide {
   /* display: flex;
   align-items: center;
   justify-content: center; */
@@ -162,8 +166,7 @@ transition: 0.3s; width: 116px; }
   font-weight: bold;
   color: #fff;
 }
-
-.swiper-slide { background-color: #342d2d; 
+.hobby .swiper-slide { background-color: #342d2d; 
     border: 2px solid #555758;
     color: #ffd700;
 }
@@ -178,7 +181,14 @@ transition: 0.3s; width: 116px; }
   border-radius: 50%;
   padding: 15px;
 }
+.series{max-width: 250px; margin-left: 70px;}
+.series .mySwiper2 .swiper-slide{border: 1px solid silver;}
+.series .mySwiper{background-color: #303230;}
+.series .mySwiper .swiper-slide{opacity: 0.4; padding: 3px 0; cursor: pointer;}
+.series .mySwiper .swiper-slide-thumb-active{opacity: 1;}
 
+.cont2{ margin-top: 100px;  }
+/* .cont2 .swiper{background-color: pink; height: 500px;} */
 
 
 
