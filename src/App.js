@@ -39,7 +39,8 @@ import { Navigation, Pagination, EffectCards, A11y, FreeMode, Thumbs } from 'swi
 function App() {
   // swipwer
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
+  
+  
   // 스크롤
   const [scr, setScr] = useState(0) //수치_저장
   const upSrc = () => { setScr(window.scrollY) } //수치
@@ -55,13 +56,13 @@ function App() {
     window.scrollTo({ top: 0 }) 
     window.addEventListener('scroll', upSrc)
     // console.log(scr)
-    // return () => window.removeEventListener('scroll', upSrc)
     if (divRef.current, divRef2.current) {
       // const divH = divRef.current.offsetHeight;
       const divH = window.outerHeight;
       const divH2 = divRef2.current.offsetHeight;
       setDimensions({ divH, divH2 });
     }
+    return () => window.removeEventListener('scroll', upSrc)
   }, [])
 
 
@@ -281,6 +282,7 @@ function App() {
                       </SwiperSlide>
                     </Swiper>
                   </div>
+                  
                   <div className="series">
                     <h3>Series</h3>
                     <Swiper
@@ -291,7 +293,9 @@ function App() {
                       loop={true}
                       spaceBetween={50}
                       navigation={true}
-                      thumbs={{ swiper: thumbsSwiper }}
+                      thumbs={{
+                        swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
+                      }}
                       modules={[FreeMode, Navigation, Thumbs]}
                       className="mySwiper2"
                     >
@@ -372,6 +376,7 @@ function App() {
                       </SwiperSlide>
                     </Swiper>
                   </div>
+                  
                 </div>
 
                 <div className="cont2">

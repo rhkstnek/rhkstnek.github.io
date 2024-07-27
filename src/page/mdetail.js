@@ -1,11 +1,12 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 function Mdetail() {
   let [cinema, setCinema] = useState([]);
   // const x = useParams()
   const { id } = useParams()
+  const backpage = useNavigate();
   // console.log(id)
   useEffect(() => {
     
@@ -18,6 +19,8 @@ function Mdetail() {
       })
   }, [])
 
+  //  목록
+  const moving = () => { backpage('/movie'); };
   
 
   return (
@@ -25,9 +28,8 @@ function Mdetail() {
         <div className='md_box'>
           <div>
             <img src={cinema.large_cover_image} />
-            <a href='/movie'>⬅ 뒤로가기
-              
-            </a>
+            <p onClick={()=>{moving()}}>⬅ 뒤로가기
+            </p>
             
           </div>
           <ul>

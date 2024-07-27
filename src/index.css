@@ -409,7 +409,7 @@ input[type="button"]{height: 30px;}
 .md_box div{width: 30%;}
 .md_box div img{border: 2px solid #fff;
   box-sizing: content-box; box-shadow: 5px 5px 20px 1px #fff;}
-.md_box div > a{color: pink; margin-top: 30px; display: block; text-align: right; font-weight: 600; }
+.md_box div > p{color: pink; margin-top: 30px; display: block; text-align: right; font-weight: 600; cursor: pointer;}
 .md_box ul{width: 65%; color: #fff;}
 .md_box ul li{margin: 25px 0; text-align: left; word-break: keep-all;}
 .md_box ul li em{font-size: 20px; font-weight: 500;}
