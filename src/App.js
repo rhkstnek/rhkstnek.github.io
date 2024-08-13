@@ -14,6 +14,7 @@ import Eight from './page/eight.js'; //가위바위보
 import Board from './page/board.js';
 import El0 from './page/el0.js';
 import El1 from './page/el1.js';
+import Crud from './page/crud.js'; // crud
 // 
 import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
@@ -89,7 +90,7 @@ function App() {
 
   return (
     <div ref={divRef}>
-      <nav >
+      <nav className="navi">
         <Link to="/">
           <img src={process.env.PUBLIC_URL + `/img/home.png`} alt="홈버튼" />
         </Link>
@@ -118,7 +119,9 @@ function App() {
           <div className="life_wrap ">
 
             <div className="lief_area ">
-
+            <div className="mscroll">
+              {/* <img src={process.env.PUBLIC_URL + `/img/mouse.png`} alt="마우스스크롤아이콘" /> */}
+            </div>
 
 
               <div ref={divRef2} className="wrap1 tC">
@@ -380,8 +383,8 @@ function App() {
                 </div>
 
                 <div className="cont2">
-                  <h3>ing...</h3>
-                  <br/>
+                  <h3>Cook</h3>
+                  <Crud/>
                 </div>
               </div>
 

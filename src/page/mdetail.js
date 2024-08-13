@@ -46,8 +46,6 @@ function Mdetail() {
   )
 }
 
-function Kkk(){
-  return <div>치킨내놔</div>
-}
+
 
 export default Mdetail;

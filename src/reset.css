@@ -19,8 +19,9 @@ body {
     display:block;
 } */
 
-ol, ul, li{
-    list-style:none;
+ol,
+ ul, li{
+    /* list-style:none; */
     padding: 0;
 }
 
