@@ -41,28 +41,24 @@ function App() {
   // swipwer
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   
-  
   // 스크롤
   const [scr, setScr] = useState(0) //수치_저장
   const upSrc = () => { setScr(window.scrollY) } //수치
+  console.log('+',scr)
 
   // 높이를 구해보자
-  const divRef = useRef(null);
-  const divRef2 = useRef(null);
-  const [dimensions, setDimensions] = useState({ height: 0, height: 0 });
-  console.log(dimensions.divH - dimensions.divH2)
-  // console.log(dimensions.divH2)
+  // const divRef = useRef(null);
+  // const divRef2 = useRef(null);
+  // const [dimensions, setDimensions] = useState({ height: 0, height: 0 });
 
   useEffect(() => { //수치_업뎃
     window.scrollTo({ top: 0 }) 
     window.addEventListener('scroll', upSrc)
-    // console.log(scr)
-    if (divRef.current, divRef2.current) {
-      // const divH = divRef.current.offsetHeight;
-      const divH = window.outerHeight;
-      const divH2 = divRef2.current.offsetHeight;
-      setDimensions({ divH, divH2 });
-    }
+    // if (divRef.current, divRef2.current) {
+    //   const divH = window.outerHeight;
+    //   const divH2 = divRef2.current.offsetHeight;
+    //   setDimensions({ divH, divH2 });
+    // }
     return () => window.removeEventListener('scroll', upSrc)
   }, [])
 
@@ -89,7 +85,7 @@ function App() {
   let [tab, setTab] = useState(0)
 
   return (
-    <div ref={divRef}>
+    <div >
       <nav className="navi">
         <Link to="/">
           <img src={process.env.PUBLIC_URL + `/img/home.png`} alt="홈버튼" />
@@ -120,25 +116,54 @@ function App() {
 
             <div className="lief_area ">
             <div className="mscroll">
-              {/* <img src={process.env.PUBLIC_URL + `/img/mouse.png`} alt="마우스스크롤아이콘" /> */}
+              <img src={process.env.PUBLIC_URL + `/img/mouse.png`} alt="마우스스크롤아이콘" />
             </div>
 
 
-              <div ref={divRef2} className="wrap1 tC">
+              <div  className="wrap1 tC">
                 <div className="first_top">
                   <h2>Nice to meet you. "<em >✋</em>"</h2>
                   <br />
                   <h3>Let me introduce my project❗</h3>
-                  <div className={scr > 30 ? `line1 scrolled` : `line1`}>line</div>
+                  <div className={scr > 24377 ? `line1 scrolled` : `line1`}>line</div>
                 </div>
                 <div className="first_btm">
                   <img src={process.env.PUBLIC_URL + `/img/laptop.png`} alt="노트북" />
                   <p>Front-End <span>{Text}</span></p>
                 </div>
+                
+              <div className="second_area">
+                <div className="second_tit">Scroll Down</div>
+                <div className="second_top">
+                  <span style={{"--i":0}}></span>
+                  <span style={{"--i":1}}></span>
+                  <span style={{"--i":2}}></span>
+                  <span style={{"--i":3}}></span>
+                  <span style={{"--i":4}}></span>
+                  <span style={{"--i":5}}></span>
+                  <span style={{"--i":6}}></span>
+                  <span style={{"--i":7}}></span>
+                  <span style={{"--i":8}}></span>
+                  <span style={{"--i":9}}></span>
+                </div>
+                <div className="second_btm">
+                  <span style={{"--i":0}}>T</span>
+                  <span style={{"--i":1}}>a</span>
+                  <span style={{"--i":2}}>k</span>
+                  <span style={{"--i":3}}>e</span>
+                  <span style={{"--i":4}}>_</span>
+                  <span style={{"--i":5}}>a</span>
+                  <span style={{"--i":6}}>_</span>
+                  <span style={{"--i":7}}>l</span>
+                  <span style={{"--i":8}}>o</span>
+                  <span style={{"--i":9}}>o</span>
+                  <span style={{"--i":10}}>k</span>
+                </div>
+              </div>
               </div>
 
 
-              <div className={scr > 300 ? `wrap2 scrolled` : `wrap2`}  >
+              <div className={scr > 24677 ? `wrap2 scrolled` : `wrap2`}  >
                 <div className="">
                   <div><h3>History</h3>
                     <div className="intro_wrap">
@@ -210,10 +235,10 @@ function App() {
                 </div>
               </div>
 
-              <div className={scr > 1050 ? `wrap3 scrolled` : `wrap3`}>
+              <div className={scr > 25427 ? `wrap3 scrolled` : `wrap3`}>
                 <h3>1. Project ( tab )</h3>
                 <LeftTabsExample tab={tab} setTab={setTab} />
-                <div className={scr > 1700 ? `wrap3_2 scrolled` : `wrap3_2`}>
+                <div className={scr > 26077 ? `wrap3_2 scrolled` : `wrap3_2`}>
                   <h3>2. Project ( url )</h3>
 
                   <div className="box">
@@ -227,7 +252,7 @@ function App() {
 
               <div className='wrap4 tC'>
                 <h2>PlayGround "<em >🎪</em>"</h2>
-                <div className={scr > 2300 ? `cont1 scrolled` : `cont1`}>
+                <div className={scr > 26677 ? `cont1 scrolled` : `cont1`}>
                   <div className="hobby">
                     <h3>Hobby card</h3>
                     <Swiper
@@ -387,6 +412,7 @@ function App() {
                   <Crud/>
                 </div>
               </div>
+
 
 
 
