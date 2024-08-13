@@ -202,9 +202,9 @@ display: flex; justify-content: center; text-align: left;
 .cont2 a{color: #fff;     border-bottom: 1px solid;}
 .crud_box{margin-top: 20px;}
 .crud_box ol{     display: flex; flex-wrap: wrap; margin-top: 15px;     border: 1px solid;
-  padding: 15px 0;
+  padding: 15px 0; 
   border-width: 3px 0 1px;}
-.crud_box ol li{margin: 5px 0; width: 43%; margin-left: 17px; padding: 5px;}
+.crud_box ol li{margin: 5px 0; width: 43%; margin-left: 17px; padding: 5px; list-style:decimal;}
 .crud_box ol li:nth-child(2n){margin-left: 10.9%;}
 .crud_box ol li a{display: block; }
 .crud_box ol li a:hover{color: orange; transition: ease-in .5s;}
