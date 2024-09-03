@@ -11,10 +11,12 @@ import Last from './page/last.js'; //날씨
 import Mdetail from './page/mdetail.js'; //영화 상세화면
 import Seven from './page/seven.js'; //팀 정하기
 import Eight from './page/eight.js'; //가위바위보
+import Calc from './page/calc.js'; //계산기
 import Board from './page/board.js';
 import El0 from './page/el0.js';
 import El1 from './page/el1.js';
 import Crud from './page/crud.js'; // crud
+
 // 
 import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
@@ -125,7 +127,7 @@ function App() {
                   <h2>Nice to meet you. "<em >✋</em>"</h2>
                   <br />
                   <h3>Let me introduce my project❗</h3>
-                  <div className={scr > 24377 ? `line1 scrolled` : `line1`}>line</div>
+                  <div className={scr > 30 ? `line1 scrolled` : `line1`}>line</div>
                 </div>
                 <div className="first_btm">
                   <img src={process.env.PUBLIC_URL + `/img/laptop.png`} alt="노트북" />
@@ -151,19 +153,21 @@ function App() {
                   <span style={{"--i":1}}>a</span>
                   <span style={{"--i":2}}>k</span>
                   <span style={{"--i":3}}>e</span>
-                  <span style={{"--i":4}}>_</span>
+                  <span style={{"--i":4}}>　</span>
                   <span style={{"--i":5}}>a</span>
-                  <span style={{"--i":6}}>_</span>
+                  <span style={{"--i":6}}>　</span>
                   <span style={{"--i":7}}>l</span>
                   <span style={{"--i":8}}>o</span>
                   <span style={{"--i":9}}>o</span>
                   <span style={{"--i":10}}>k</span>
+                  <span style={{"--i":11}}>　</span>
+                  <span style={{"--i":12}}>:)</span>
                 </div>
               </div>
               </div>
 
 
-              <div className={scr > 24677 ? `wrap2 scrolled` : `wrap2`}  >
+              <div className={scr > 26600 ? `wrap2 scrolled` : `wrap2`}  >
                 <div className="">
                   <div><h3>History</h3>
                     <div className="intro_wrap">
@@ -235,10 +239,10 @@ function App() {
                 </div>
               </div>
 
-              <div className={scr > 25427 ? `wrap3 scrolled` : `wrap3`}>
+              <div className={scr > 27300 ? `wrap3 scrolled` : `wrap3`}>
                 <h3>1. Project ( tab )</h3>
                 <LeftTabsExample tab={tab} setTab={setTab} />
-                <div className={scr > 26077 ? `wrap3_2 scrolled` : `wrap3_2`}>
+                <div className={scr > 27700 ? `wrap3_2 scrolled` : `wrap3_2`}>
                   <h3>2. Project ( url )</h3>
 
                   <div className="box">
@@ -252,7 +256,7 @@ function App() {
 
               <div className='wrap4 tC'>
                 <h2>PlayGround "<em >🎪</em>"</h2>
-                <div className={scr > 26677 ? `cont1 scrolled` : `cont1`}>
+                <div className={scr > 28400 ? `cont1 scrolled` : `cont1`}>
                   <div className="hobby">
                     <h3>Hobby card</h3>
                     <Swiper
@@ -488,7 +492,9 @@ function LeftTabsExample({ tab, setTab }) {
             <Nav.Item>
               <Nav.Link onClick={() => { setTab(3) }} eventKey="third">가위바위보</Nav.Link>
             </Nav.Item>
-
+            <Nav.Item>
+              <Nav.Link onClick={() => { setTab(4) }} eventKey="fifth">계산기</Nav.Link>
+            </Nav.Item>
           </Nav>
         </Col>
         <Col sm={9}>
@@ -497,6 +503,7 @@ function LeftTabsExample({ tab, setTab }) {
             {tab == 1 ? <Tab.Pane eventKey="fourth"><Five></Five></Tab.Pane> : ''}
             {tab == 2 ? <Tab.Pane eventKey="second"><Seven /></Tab.Pane> : null}
             {tab == 3 ? <Tab.Pane eventKey="third"><Eight></Eight></Tab.Pane> : ''}
+            {tab == 4 ? <Tab.Pane eventKey="fifth"><Calc></Calc></Tab.Pane> : ''}
 
           </Tab.Content>
         </Col>

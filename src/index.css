@@ -96,9 +96,47 @@ h2 em{
   color: #3578b6;
 }
 
+.second_area{}
+.second_tit{
+  display: flex; justify-content: center; align-items: center;
+  min-height: 100vh; font-size: 100px; font-weight: bold; text-transform: uppercase;
+  color: #fff; position: relative;
+  animation-name: ani2; 
+  animation-iteration-count: infinite;
+  animation-duration: 2s; 
+  
+}
+@keyframes ani2{
+  0%{bottom:-10px;}
+  50%{bottom: 10px;}
+  100%{bottom: -10px;}
+}
+.second_top{position:relative; display: flex; background: #000;}
+.second_top > span{ 
+  background: #3578b6;
+  position: sticky;
+  top: 0;
+  height: 99.9vh;
+  width: 10%;
+  margin-top: calc(100vh* var(--i));
+}
+.second_btm{position: relative; 
+  background: linear-gradient(0deg, #000, #845d0a,  #b47f0e, #1fae99, #3578b6); 
+  display: flex; justify-content: center;}
+.second_btm > span{
+  position: sticky;
+  top: 0;
+  line-height: 100vh;
+  height: 100vh;
+  color: #fff;
+  font-size: 100px;
+  margin-top: calc(100vh* var(--i));
+}
+.second_btm > span:nth-child(5), .second_btm > span:nth-child(7), .second_btm > span:nth-child(12){font-size: 50px;}
+
 /* 02. history&lang */
-.wrap2{margin-top: 150px; opacity: 0; transition: 0.5s;}
-.wrap2.scrolled{opacity: 1; transition: 0.5s; margin-top: 150px;}
+.wrap2{margin-top: 100px; opacity: 0; transition: 0.5s;}
+.wrap2.scrolled{opacity: 1; transition: 0.5s; margin-top: 0px;}
 .wrap2 > div{display: flex; justify-content: center; align-items: flex-start;}
 .wrap2 > div > div:last-child{margin-left: 70px; width: 250px;}
 .wrap2 > div > div > ul{margin-top: 102px;}
@@ -214,40 +252,7 @@ display: flex; justify-content: center; text-align: left;
 .crud_box article textarea{width: 185px;}
 .crud_box input[type="button"]{height: 25px;}
 
-.second_area{}
-.second_tit{
-  display: flex; justify-content: center; align-items: center;
-  min-height: 100vh; font-size: 100px; font-weight: bold; text-transform: uppercase;
-  color: #fff; position: relative;
-  animation-name: ani2; 
-  animation-iteration-count: infinite;
-  animation-duration: 2s; 
-  
-}
-@keyframes ani2{
-  0%{bottom:-10px;}
-  50%{bottom: 10px;}
-  100%{bottom: -10px;}
-}
-.second_top{position:relative; display: flex; background: #000;}
-.second_top > span{ 
-  background: #3578b6;
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  width: 10%;
-  margin-top: calc(100vh* var(--i));
-}
-.second_btm{position: relative; background: linear-gradient(0deg, #ff0076, #cc00ff, #ffae00, #1fae99, #3578b6); display: flex; justify-content: center;}
-.second_btm > span{
-  position: sticky;
-  top: 0;
-  line-height: 100vh;
-  height: 100vh;
-  color: #fff;
-  font-size: 100px;
-  margin-top: calc(100vh* var(--i));
-}
+
 
 /* 스크롤 내리는데 화면은 가만히 */
 
