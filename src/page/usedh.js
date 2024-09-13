@@ -20,9 +20,9 @@ const UsedH = ({product}) => {
         </button>
         {look == true ? <div className="info">
           <ul>
-            {/* <li>
-              <Link to='/used/sign'>로그인</Link>
-            </li> */}
+            <li>
+              <Link to='/used'>로그인<br/>(추가예정)</Link>
+            </li>
             <li>
               <Link to='/made'>글작성</Link>
             </li>
