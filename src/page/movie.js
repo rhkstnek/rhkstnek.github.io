@@ -28,7 +28,6 @@ function Movie() {
           <ul className="movie_area">
           {movie.map((a, i) => {
             let kk = movie[i].id
-            // console.log(kk)
             return (
               <li key={i}>
                 <Link  to={`/Mdetail/${kk}`} className="mva">

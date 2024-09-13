@@ -4,15 +4,12 @@ import { useParams, useNavigate } from 'react-router-dom';
 
 function Mdetail() {
   let [cinema, setCinema] = useState([]);
-  // const x = useParams()
   const { id } = useParams()
   const backpage = useNavigate();
-  // console.log(id)
   useEffect(() => {
     
     
-    axios.get(`https://yts.mx/api/v2/movie_details.json?movie_id=
-    ${id}`)
+    axios.get(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)  
       .then((kill) => {
         console.log(kill)
         setCinema(kill.data.data.movie)

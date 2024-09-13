@@ -130,9 +130,9 @@ function Crud() {
   } else if (mode == 'create') {
     content = <Create setMode={setMode} onCreate={(_title, _body) => {
       const newTopic = { id: nextId, title: _title, body: _body }
-      const newTopics = [...topics]
-      newTopics.push(newTopic)
-      setTopics([...newTopics])
+      const newWorld = [...topics]
+      newWorld.push(newTopic)
+      setTopics([...newWorld])
       setMode('read')
       setId(nextId)
       setNextId(nextId + 1)
@@ -152,15 +152,15 @@ function Crud() {
     content = <Update title={title} body={body} setMode={setMode}
       onUpdate={(title, body) => {
         console.log(title, body);
-        const newTopics = [...topics]
+        const newWorld = [...topics]
         const updatedTopic = { id: id, title: title, body: body }
-        for (let i = 0; i < newTopics.length; i++) {
-          if (newTopics[i].id === id) {
-            newTopics[i] = updatedTopic;
+        for (let i = 0; i < newWorld.length; i++) {
+          if (newWorld[i].id === id) {
+            newWorld[i] = updatedTopic;
             break;
           }
         }
-        setTopics(newTopics)
+        setTopics(newWorld)
         setMode('read')
       }}
     />
