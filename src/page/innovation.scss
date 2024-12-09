@@ -314,13 +314,15 @@ transition: 0.3s; overflow: hidden;}
   }
   .made_area .ma_left > .thumb img{position: static; width: 90%; }
   .ma_btm{margin-top: 30px;}
-  .ma_right{
-    div{
-      input, textarea, span, p{ width: calc(100% - 40px);}
-      input{margin-left: 8px;}
+  .made_area{
+      .ma_right{
+        div{
+          input, textarea, span, p{ width: calc(100% - 40px);}
+          input{margin-left: 8px;}
+        }
+      }
     }
-  }
-  
+      
 
 
   // 마이페이지(목록
