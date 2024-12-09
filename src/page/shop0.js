@@ -1,24 +1,23 @@
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import UsedH from "./usedh";
+import ShopHam from "./shopham";
 
-function Used0({ product }) {
+function Shop0({ product }) {
   const { uid } = useParams()
   let nawa = product.find(
     function (e) {
       return e.id == uid;
     }
   );
-  // console.log(uid)
 
   const backpage = useNavigate();
   function mov(){
-    backpage('/used');
+    backpage('/shop');
   }
 
   return (
     <div className="innovation">
-      <UsedH />
+      <ShopHam />
       <h2>상세페이지</h2>
       <div className='made_area'>
         <div className='ma_left'>
@@ -37,7 +36,7 @@ function Used0({ product }) {
         </div>
       </div>
       <div style={{maxWidth:'800px', margin:'0 auto'}}>
-        <button onClick={mov}>
+        <button className="backArrow" onClick={mov}>
           <img src={process.env.PUBLIC_URL + `/img/left-arrow.png`}/>
         </button>
       </div>
@@ -46,4 +45,4 @@ function Used0({ product }) {
 }
 
 
-export default Used0;
+export default Shop0;

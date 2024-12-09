@@ -17,6 +17,10 @@ const SearchBox = styled.form`
     outline: none;
     font-family: Montserrat;
     font-weight: bold;
+    @media all and (max-width:580px) {
+    width:100%;
+    padding: 5px;
+  }
   }
   & button {
     background-color: black;
@@ -35,17 +39,26 @@ const ChooseCityLabel = styled.span`
   margin: 10px auto;
   font-size: 18px;
   font-weight: bold;
+  @media all and (max-width:580px) {
+    font-size: 15px;
+    margin: 10px auto;
+  }
 `;
 const WelcomeWeatherLogo = styled.img`
   width: 140px;
   height: 140px;
   margin: 40px auto;
+  @media all and (max-width:580px) {
+    width: 70px;
+    height: 70px;
+    margin: 0px auto;
+  }
 `;
 const CityComponent = (props) => {
   const { updateCity, fetchWeather } = props;
   return (
     <>
-      <WelcomeWeatherLogo src={process.env.PUBLIC_URL +"/img/icons/perfect-day.svg"} />
+      <WelcomeWeatherLogo src={process.env.PUBLIC_URL + "/img/icons/perfect-day.svg"} />
       <ChooseCityLabel>Find Weather of your city</ChooseCityLabel>
       <SearchBox onSubmit={fetchWeather}>
         <input
@@ -54,7 +67,7 @@ const CityComponent = (props) => {
         />
         <button type={"submit"}>Search</button>
       </SearchBox>
-        <p style={{color:`red`,fontWeight:'600'}}>ex) seoul, paris, italy</p>
+      <p style={{ color: `red`, fontWeight: '600' }}>ex) seoul, paris, italy</p>
     </>
   );
 };

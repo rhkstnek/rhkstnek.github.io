@@ -41,10 +41,6 @@ function Movie() {
             )
           })}
         </ul>
-          <div className="page">
-            <Link to="" >1</Link>
-            <Link to="" >2</Link>
-          </div>
         </div> 
         : <div className="movie_loading"><img style={{width:'40%'}} src={process.env.PUBLIC_URL + `/img/loading2.png`} alt='loading' /></div>
         }

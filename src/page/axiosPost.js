@@ -3,7 +3,6 @@ import { useState } from 'react'
 import Pagination from 'react-js-pagination'
 import styled from 'styled-components'
 import { useNavigate } from 'react-router-dom';
-import Poo from "./poo";
 
 import { Link } from 'react-router-dom';
 
@@ -12,10 +11,6 @@ const AxiosPost = ({ product }) => {
   const [items, setItems] = useState(6);
 
   const handlePageChange = (page) => { setPage(page); };
-  // const itemChange = (e) => {
-  //   setItems(Number(e.target.value))
-
-  // }
   const navigate = useNavigate();
 
   return (
@@ -27,9 +22,10 @@ const AxiosPost = ({ product }) => {
         ).map((a, i) => {
           return (
             <li key={i}>
-              <Link 
-                onClick={(e)=>{e.preventDefault()
-                  navigate(`/used/used0/${a.id}`)
+              <Link
+                onClick={(e) => {
+                  e.preventDefault()
+                  navigate(`/shop/shop0/${a.id}`)
                 }}
               >
                 <div className="p_thumb">
@@ -52,7 +48,6 @@ const AxiosPost = ({ product }) => {
           onChange={handlePageChange}>
         </Pagination>
       </PaginationBox>
-      {/* <Poo/> */}
     </div>
   )
 }
@@ -63,7 +58,7 @@ const PaginationBox = styled.div`
   ul.pagination li {
     display: inline-block;
     
-    border: 1px solid #e2e2e2;
+    border: 1px solid #adacac;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,6 +76,13 @@ const PaginationBox = styled.div`
   ul.pagination li.active { background-color: #337ab7; }
   ul.pagination li a:hover,
   ul.pagination li a.active { color: blue; }
+
+  @media all and (max-width:580px){
+  ul.pagination li a { font-size: 0.8rem; 
+    width: 25px;
+    height: 25px;
+    line-height: 23px;
+  }}
 `
 
 export default AxiosPost

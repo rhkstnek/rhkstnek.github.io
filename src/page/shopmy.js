@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import UsedH from "./usedh";
+import ShopHam from "./shopham";
 import "./innovation.scss"
 
-function UsedMy({ product, setProduct, id, setId }) {
+function ShopMy({ product, setProduct, id, setId }) {
   const { uid } = useParams()
   let nawa = product.find(
     function (e) {
@@ -13,8 +13,8 @@ function UsedMy({ product, setProduct, id, setId }) {
 
   return (
     <div className="innovation">
-      <UsedH />
-      <h2><span style={{color:'brown'}}>기록</span>관리</h2>
+      <ShopHam />
+      <h2><span style={{color:'brown'}}>목록</span>보기</h2>
       <ul className="myList">
         <li>
           <span>사진</span><span>제목</span>
@@ -24,7 +24,7 @@ function UsedMy({ product, setProduct, id, setId }) {
 
           return (
             <li key={ii}>
-              <div><Link id={product[ii].id} to={`/used/used0/${product[ii].id}`}
+              <div><Link id={product[ii].id} to={`/shop/shop0/${product[ii].id}`}
 
 
               >
@@ -74,4 +74,4 @@ function UsedMy({ product, setProduct, id, setId }) {
 
 }
 
-export default UsedMy;
+export default ShopMy;

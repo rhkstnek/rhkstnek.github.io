@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useParams, Link, useNavigate } from "react-router-dom";
 import "./innovation.scss"
-import UsedH from "./usedh";
+import ShopHam from "./shopham";
 
 const Modify = ({ product, idNum, setIdNum, id, setId }) => {
   const { uid } = useParams()
@@ -12,7 +12,7 @@ const Modify = ({ product, idNum, setIdNum, id, setId }) => {
   );
 
   const backpage = useNavigate();
-  const moving = () => { backpage('/usedmy'); };
+  const moving = () => { backpage('/shopmy'); };
 
   // let [idNum, setIdNum] = useState(4);
   // const [look, setLook] = useState(false);
@@ -52,7 +52,7 @@ const Modify = ({ product, idNum, setIdNum, id, setId }) => {
   
   return (
     <div className='innovation'>
-      <UsedH />
+      <ShopHam />
       <h2><span style={{ color: 'green' }}>수정</span>하기</h2>
       <form onSubmit={(e) => { e.preventDefault() }}>
         <div className='made_area'>
@@ -76,7 +76,7 @@ const Modify = ({ product, idNum, setIdNum, id, setId }) => {
 
         <div className='ma_btm'>
           <button>
-            <Link to='/usedmy'>취소</Link>
+            <Link to='/shopmy'>취소</Link>
           </button>
           <button onClick={() => {
             for (let index = 0; index < product.length; index++) {

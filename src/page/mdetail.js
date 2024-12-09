@@ -36,7 +36,7 @@ function Mdetail() {
             </li>
             <li><em>runtime</em> : {cinema.runtime}</li>
             <li><em>rating</em> : {cinema.rating}</li>
-            <li><em>info</em><br/><br/>{cinema.description_intro}</li>
+            {/* <li><em>info</em><br/><br/>{cinema.description_intro}</li> */}
           </ul>
         </div>
     </div>

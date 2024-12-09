@@ -1,14 +1,14 @@
 import React, { useEffect, useRef, useState, } from 'react'
 import "./innovation.scss"
-import UsedH from "./usedh";
+import ShopHam from "./shopham";
 import { useNavigate } from 'react-router-dom';
 
-const Made = ({ setProduct, product, idNum, setIdNum, id, setId }) => {
+const ShopMade = ({ setProduct, product, idNum, setIdNum, id, setId }) => {
   const [imgFile, setImgFile] = useState("");
   const imgRef = useRef();
 
   let backpage = useNavigate();
-  let mov = () => {backpage('/used')}
+  let mov = () => {backpage('/shop')}
 
   // 이미지 업로드 input의 onChange
   const saveImgFile = () => {
@@ -43,7 +43,7 @@ const Made = ({ setProduct, product, idNum, setIdNum, id, setId }) => {
   const [look, setLook] = useState(false);
   return (
     <div className='innovation'>
-      <UsedH />
+      <ShopHam />
       <h2><span style={{ color: 'grey' }}>작성</span>하기</h2>
       <form onSubmit={(e) => { e.preventDefault() }}>
         <div className='made_area'>
@@ -52,7 +52,7 @@ const Made = ({ setProduct, product, idNum, setIdNum, id, setId }) => {
               <div className='im'>
                 {imgFile ? <img src={imgFile} alt="프로필 이미지" /> : <p style={{ color: col }}>이미지를 첨부해주세요.</p>}
               </div>
-              <label htmlFor='o20'>이미지 첨부</label>
+              <label htmlFor='o20'>이미지 첨부하기</label>
               <input id='o20' type='file' accept="image/*" onChange={saveImgFile}
                 ref={imgRef} />
             </div>
@@ -94,4 +94,4 @@ const Made = ({ setProduct, product, idNum, setIdNum, id, setId }) => {
   )
 }
 
-export default Made
+export default ShopMade

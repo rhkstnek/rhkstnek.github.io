@@ -160,7 +160,7 @@ h2 em{
 .wrap2 h3 > span{font-size: 16px; display: inline-block; }
 
 .wrap3{margin-top: 150px; text-align: center; 
-  /* opacity: 0; left:-520px; */
+  opacity: 0; left:-520px;
   transition: 0.5s; position: relative;  overflow-x: hidden;}
 .wrap3.scrolled{ opacity: 1; transition: 0.5s; left:0px;}
 .wrap3 a{color: #fff;}
@@ -243,9 +243,11 @@ display: flex; justify-content: center; text-align: left;
 /* 요리레시피 */
 .cont2{ margin: 100px auto 0 ;  max-width: 550px; text-align: left; color: #fff;}
 .cont2 a{color: #fff;     border-bottom: 1px solid;}
+.cont2 article form > p:first-child > input{width: 184px;}
+.crud_box article textarea{resize: none;}
 .crud_box{margin-top: 20px;}
 .crud_box ol{ display: flex; flex-wrap: wrap; margin-top: 15px; border: 1px solid #505050; padding: 15px 0; border-width: 3px 0 1px;}
-.crud_box ol li{margin: 5px 0; width: 43%; margin-left: 17px; padding: 5px; list-style:decimal;}
+.crud_box ol li{margin: 5px 0; width: 43%; margin-left: 3%; padding: 5px; list-style:decimal;}
 .crud_box ol li:nth-child(2n){margin-left: 10.9%;}
 .crud_box ol li a{display: block; padding-bottom: 2px;}
 .crud_box ol li a:hover{color: orange; transition: ease-in .5s;}
@@ -264,6 +266,7 @@ display: flex; justify-content: center; text-align: left;
 /* 푸터 */
 .wrap0{width: 100%; height: 350px; background-color: #282828; padding-top: 60px; margin-top: 10px; }
 
+.wrap0 h3{color: #fff;}
 .wrap0_area{max-width: 570px; margin:0 auto; }
 .wrap0_box{text-align: center; margin-top: 45px;}
 .wrap0_box > div{display: inline-block; margin: 0 25px;
@@ -546,6 +549,115 @@ border-radius: 50%; padding: 54px 45.33px;
 .list_box > div.btop{background: #fff; padding: 25px;}
 
 
+.etc_wrap{
+  background-color: #1fae99;
+  height: 90vh;
+}
+
+
+@media all and (max-width:580px) {
+.life_wrap{ overflow-x: hidden;}
+.lief_area {margin: 0 5px;}
+.mscroll{display: none;}
+/* 01.intro */
+.first_top{padding-top: 50px;}
+.first_top h2{font-size: 28px;  }
+.lief_area h3{font-size: 19px; margin-bottom: 20px;}
+.line1{width: 90%;}
+
+.first_btm{margin-top: 0px;}
+.first_btm p{font-size: 25px;}
+.first_btm > img{width: 90%;}
+
+.wrap2 > div{display: block;}
+.wrap2 > div > div > ul{margin-top: 20px;}
+.wrap2 > div > div:last-child{margin: 20px auto 0; margin-left: 0; width: auto;}
+.wrap2 h3 > span{font-size: 14px;}
+.wrap2 > div > div > ul > li{font-size: 13px; padding: 4px; padding-right: 10px;}
+.wrap2 > div > div > ul > li svg{margin-right: 4px; width: 12px !important;}
+
+.wrap3 .tab-content{margin: 0 5px;}
+.coin select{width: 100%; font-size: 14px;}
+.flex-column{flex-wrap: wrap;}
+.flex-column{margin: 20px 0 40px;}
+.flex-column > div:nth-last-child(-n+3){margin-top: 10px;}
+.flex-column > div{width: 31%;}
+.flex-column > div > a{width: 100%; word-break: keep-all; font-size: 13px;
+  padding: 12px 10px;}
+.intro_wrap{width: 200px; margin: 33px auto ; padding: 30px 10px 10px 10px;}
+.intro_wrap strong{font-size: 11px;}
+.intro_wrap em{font-size: 15px;}
+.intro_wrap p, .intro_wrap span{font-size: 13px;}
+.intro_wrap a{width: 35px; height: 18px; line-height: 18px; font-size: 11px;} 
+.intro_list > li{font-size: 12px; padding-left: 4px;}
+.intro_list > li:before{width: 2px; height: 2px; border-radius: 2px; top: 8px;}
+.intro_pin{width: 49px; top: -5px;}
+.wrap3_2 .box > a{padding: 12px 10px; font-size: 13px; width: auto; margin: 0 7px;}
+.todo{padding: 15px 10px;}
+.todo h4{font-size: 20px;}
+.allDel{font-size: 11px; transform:translateY(0)}
+.todo > .inputBox{font-size: 13px;}
+.todo hr{margin: 8px 0;}
+.todo ul li{padding: 10px;}
+.todo ul li span{font-size: 14px;}
+.todo ul li b{font-size: 17px;}
+.team_area{height: 150px;}
+.team_area p{font-size: 15px; padding: 36.5px 33px;}
+.team_area span{font-size: 14px;}
+.teamOne{font-size: 17px;}
+.team_area::after{font-size: 10px;}
+.team_area.game1::after{padding:10px; font-size: 8px;}
+.team_area.game1 > div p{font-size: 20px;}
+.game1 > div{width: 80px; height: 80px;}
+.game1 > div span{bottom: -30px;}
+/* .calc_wrap input{width: 100%;} */
+
+
+.wrap4{margin-top: 40px;}
+.wrap4 h2{font-size: 28px;}
+.hobby .swiper{width: 150px; height: 200px;}
+.hobby .swiper-slide{font-size: 16px;}
+.card_img{width: 60px;}
+.cont1{margin-top: 50px; display: block;}
+.series{margin-left: 0; margin-top: 30px; max-width: initial;}
+.series .swiper{width: 150px; height: 200px;}
+.series .swiper-button-next:after, .series .swiper-button-prev:after{
+  font-size: 28px;
+}
+.cont2{margin-top: 40px;}
+.crud_box ol li{margin-left: 17px;         width: calc(46% - 17px);}
+.crud_box h4 a{font-size: 16px;}
+.crud_box ol li{font-size: 14px;}
+.crud_box ol li a{font-size: 14px;}
+.crud_box article h5{font-size: 16px;}
+.crud_box article p{font-size: 14px;}
+.crud_box article+div a{font-size: 14px;}
+
+/* 5.영화 */
+.movie_wrap > p{font-size: 28px;}
+.movie_area{padding-top: 20px;}
+.movie_area li{width: 23%; }
+.md_box{display: block;}
+.md_box div{width: 60%; margin: 0 auto;}
+.md_box div > p{font-size: 15px; margin-top: 15px;}
+.md_box ul{margin: 0 10px;}
+.md_box ul li span{font-size: 20px;}
+.md_box ul li em{font-size: 15px;}
+.md_box ul li{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.wrap0{height: 210px; padding: 0 5px; padding-top: 30px; padding-bottom: 10px;}
+.wrap0_box{margin-top: 30px; display: flex;}
+.wrap0_box img{width: 80%;}
+.wrap0_box > div{margin: 0 10px;}
+.wrap0_box span{font-size: 14px;}
+}
+
+
 
 @media all and (max-width:479px) {
   /* 날씨 */
@@ -555,8 +667,9 @@ border-radius: 50%; padding: 54px 45.33px;
 
   /* 5.영화 */
   .movie_area li{width: 48%; }
+  .movie_wrap > p{font-size: 22px;}
   .movie_area li p{margin-bottom: 20px; margin-top: 5px; font-size: 16px; font-weight: 500;}
-
+  
 }
 
 

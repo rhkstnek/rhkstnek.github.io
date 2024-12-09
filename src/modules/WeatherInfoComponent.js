@@ -15,6 +15,10 @@ const Location = styled.span`
   text-transform: capitalize;
   font-size: 28px;
   font-weight: bold;
+  @media all and (max-width:580px) {
+    font-size: 15px;
+    margin: 10px auto;
+  }
 `;
 const Condition = styled.span`
   margin: 20px auto;
@@ -36,6 +40,10 @@ const WeatherIcon = styled.img`
   width: 100px;
   height: 100px;
   margin: 5px auto;
+  @media all and (max-width:580px) {
+    width: 70px;
+    height: 70px;
+  }
 `;
 const WeatherContainer = styled.div`
   display: flex;
@@ -44,6 +52,10 @@ const WeatherContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  @media all and (max-width:580px) {
+      flex-wrap: wrap;
+      margin: 15px auto;
+  }
 `;
 
 const WeatherInfoContainer = styled.div`
@@ -60,10 +72,17 @@ const InfoContainer = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  @media all and (max-width:580px) {
+    width: 40%;
+  }
 `;
 const InfoIcon = styled.img`
   width: 36px;
   height: 36px;
+  @media all and (max-width:580px) {
+    width: 30px;
+    height: 30px;
+  }
 `;
 const InfoLabel = styled.span`
   display: flex;
@@ -73,6 +92,9 @@ const InfoLabel = styled.span`
   & span {
     font-size: 12px;
     text-transform: capitalize;
+  }
+  @media all and (max-width:580px) {
+    margin:10px;
   }
 `;
 

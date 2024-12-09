@@ -1,7 +1,10 @@
 .innovation {
   position: relative;
-  background: #cbccca;
-  min-height: 79vh;
+  background: #f5f6f7;
+  background: #e7e7e7;
+  background: #fff;
+  min-height: calc(100vh - 200px);
+  min-height: calc(90vh);
   h2{text-align: center; padding-top: 15px; font-size: 20px;
   font-weight: 600;}
   .ham_box{
@@ -18,20 +21,20 @@
  
   .info{
     position: absolute;
-    right: 0;
+    right: 3px;
     top: 35px;
     font-size: 13px;
     border-radius: 10px;
     width: 75px;
     text-align: center;
-    background-color: #141517;
+    background-color: #e8b10c;
     z-index: 1;
     ul, li{padding-left: 0; margin-bottom: 0;}
     li:first-child a{border-top: 0;}
     a{
       color: #fff;
       text-decoration:none;
-      padding: 6px 0;
+      padding: 8px 0;
       display: block;
       border-top: 1px double #fff;
     }
@@ -50,7 +53,9 @@
       width: 24%;
       margin-bottom: 25px;
 
-      .p_thumb {border: 1px solid;  padding-top:99%; position: relative;}
+      .p_thumb {border: 1px solid #e8b10c;  padding-top:99%; position: relative;
+       }
+      
       .p_thumb img{position: absolute;
         width: 100%;
         height: 100%;
@@ -64,12 +69,14 @@
   }
   .p_title { margin-top: 5px; } 
   .p_price { font-weight: 700; margin: 5px 0; }
-  .p_address { font-size: 12px; }
+  .p_address { font-size: 12px; color: #616466; }
 }
 
-.olive{padding-top: 20px; text-align: center;}
-.olive img{width: 30px; vertical-align: middle;}
-.olive span{vertical-align: middle; font-size: 25px; font-weight: 500; color: #fff;}
+.orange{padding-top: 25px; text-align: center;}
+.orange img{width: 30px; vertical-align: middle;}
+.orange span{vertical-align: middle; }
+.orange span a{font-size: 25px; font-weight: 500; color: #e8b10c;}
+.orange span a:hover{color: #c19308;}
 
 .made_area > div{width: 49%;}
 .made_area > div:last-child{margin-left: 2%;}
@@ -92,7 +99,7 @@
   .ma_left > .thumb .im{position: relative; height: 93%;
     // padding-top: 80%; 
     align-content: center; text-align: center;}
-  .ma_left > .thumb .im p{color: #3578b6;  margin-bottom: 0;}
+  .ma_left > .thumb .im p{color: #e8b10c;  margin-bottom: 0;}
   .ma_left > .thumb img{
     position: absolute;
     height: 100%;
@@ -128,7 +135,7 @@
   button{ background: rgb(75 85 99); color: #fff; border-radius: 5px; padding: 10px; font-size: 12px; margin: 0 1%;
   }
   a{color: #fff; display: block;}
-  button:last-child{background: rgb(5, 122, 85);}
+  button:last-child{background: #e8b10c;}
 }
 
 // .udtail{
@@ -143,9 +150,11 @@
 //     margin: 10px 0;
 //   }
 // }
-.myList{padding-top: 15px;}
+.myList{padding-top: 25px;}
 .myList > li:nth-child(odd){
-  background-color: #141517;
+  background-color: #3578b6;
+  background-color: #e8b10c;
+  background-color: #000;
 }
 .myList > li { display: flex; justify-content: space-evenly;
   // background: #141517;
@@ -156,7 +165,10 @@
   color: #fff;
 }
 .myList > li a, .myList > li button{color: #fff;}
-.myList > li a img{width: 90px; height: 90px;}
+.myList > li a img{width: 90px; height: 90px; border-radius: 5px;
+transition: 0.3s; overflow: hidden;}
+.myList > li a img:hover{transform: scale(1.1);}
+.myList > li a img.mod:hover{transform: none;}
 .myList > li img.mod{width: 25px; height: 25px; }
 .myList > li span{width: 20%; text-align: center;}
 .myList > li div{width: 20%; text-align: center;}
@@ -175,4 +187,165 @@
   &:disabled {
     background-color: rgba(0, 149, 246, 0.3);
   }
+}
+
+// 로그인
+.form_wrap{ background-color: #fff; 
+  padding: 60px 0;
+  min-height: calc(100vh - 200px);
+  min-height: calc(90vh);
+}
+.wrapper {
+  margin: 0 auto;
+  max-width: 350px;
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.1);
+}
+.wrapper .title {
+  height: 120px;
+  background: #e8b10c;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .form {
+  padding: 25px 35px;
+}
+.wrapper .form .row {
+  height: 60px;
+  margin-top: 15px;
+  position: relative;
+}
+.wrapper .form .row i+input{
+  width: calc(100% - 70px);
+}
+.wrapper .form .row input {
+  height: 94%;
+  width: 100%;
+  outline: none;
+  padding-left: 70px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+.form .row input:focus {
+  border-color: #e8b10c;
+}
+.form .row input::placeholder {
+  color: #999;
+}
+.wrapper .form .row i {
+  position: absolute;
+  width: 55px;
+  height: 100%;
+  color: #fff;
+  font-size: 22px;
+  background: #e8b10c;
+  border: 1px solid #e8b10c;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .form .pass {
+  margin-top: 12px;
+}
+.wrapper .form .pass a {
+  color: #e8b10c;
+  font-size: 17px;
+  text-decoration: none;
+}
+.wrapper .form .pass a:hover {
+  text-decoration: underline;
+}
+.wrapper .form .button input {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: #e8b10c;
+  border: 1px solid #e8b10c;
+  cursor: pointer;
+}
+.form .button input:hover {
+  background: #c19308;
+}
+.wrapper .form .signup-link {
+  text-align: center;
+  margin-top: 45px;
+  font-size: 17px;
+}
+.wrapper .form .signup-link a {
+  color: #e8b10c;
+  text-decoration: none;
+  margin-left: 5px;
+}
+.form .signup-link a:hover {
+  text-decoration: underline;
+}
+
+@media all and (max-width:580px){
+  // 리스트
+  .innovation{padding: 10px 0;}
+  .innovation .pro_list{padding-top: 5px;}
+  .innovation .pro_list li{width: 37%; margin-bottom: 20px;}
+  .orange {padding-top: 15px;}
+  .orange span a{font-size: 22px;}
+  .btrJtf ul.pagination li a{width: 25px; height: 25px;}
+
+  // 리스트상세 & 등록
+  .innovation h2{font-size: 17px;}
+  .innovation button.backArrow{display: block; width: 100%;}
+  .innovation button.backArrow img{ width: 40px;}
+  .made_area{display: block;}
+  .made_area > div{width: auto; margin: 0px 10px;}
+  .made_area > div:last-child{margin: 10px;}
+  .made_area .ma_right textarea, .made_area .ma_right span{
+    min-height: 100px;
+    height: auto;
+  }
+  .made_area .ma_left > .thumb img{position: static; width: 90%; }
+  .ma_btm{margin-top: 30px;}
+  .ma_right{
+    div{
+      input, textarea, span, p{ width: calc(100% - 40px);}
+      input{margin-left: 8px;}
+    }
+  }
+  
+
+
+  // 마이페이지(목록
+  .myList{ padding: 10px 5px 0;}
+  .myList > li{margin: 2px 0;}
+  .myList > li span{width: 25%; font-size:15px}
+  .myList > li span:nth-last-child(-n+2){width: 32px;}
+  .myList > li div{font-size: 13px; width: 25%;}
+  .myList > li div:nth-last-child(-n+2){width: 32px;}
+  .myList > li a img{width: 80px; height: 100%; }
+  .myList > li img.mod{width: 15px; height: 15px;}
+
+  // 로그인
+  .form_wrap{display: flex;
+        align-items: flex-start;
+        justify-content: center;
+      }
+  .wrapper{ max-width: 300px; margin:  0 10px;}
+  .wrapper .title{height: 50px; font-size: 20px;}
+  .wrapper .form{padding: 10px 12px;}
+
+  .wrapper .form .row{ height: 40px; margin-top: 15px;} 
+  .wrapper .form .row i{width: 35px; font-size: 15px;}
+  .wrapper .form .row input{height: 91%; font-size: 14px; }
+  .wrapper .form .button input{margin-top: 15px; font-size: 17px;}
+  .wrapper .form .row i + input{width: calc(100% - 50px); padding-left: 50px;}
+  .wrapper .form .signup-link{font-size: 15px; margin-top: 30px;}
 }

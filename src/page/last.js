@@ -32,6 +32,9 @@ const Container = styled.div`
   box-shadow: 0 3px 6px 0 #555;
   background: white;
   font-family: Montserrat;
+  @media all and (max-width:580px) {
+    width: 250px;
+  }
 `;
 
 const AppLabel = styled.span`
@@ -39,6 +42,9 @@ const AppLabel = styled.span`
   margin: 20px auto;
   font-size: 18px;
   font-weight: bold;
+  @media all and (max-width:580px) {
+    font-size: 15px;
+  }
 `;
 const CloseButton = styled.span`
   padding: 2px 3px;

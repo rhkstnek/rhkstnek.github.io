@@ -25,7 +25,7 @@ function Five() {
 
 
   return (
-    <div className="tC">
+    <div className="tC coin">
       <h4 >코인정보입니다. ({coin.length})개</h4>
       <br/>
       <div>{now != '' ? `로딩중...` :

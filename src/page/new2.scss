@@ -61,3 +61,13 @@ $lemon : #fff;
     cursor: pointer;
   }
 }
+
+@media all and (max-width:580px) {
+  .calc_wrap{max-width: 210px;}
+  .calc_wrap input{
+    width: 95%; 
+    font-size: 20px;
+  }
+  .calc_wrap .row button{width: 40px; height: 40px; font-size: 15px;}
+  .calc_wrap .clear{font-size: 17px; height: 30px;}
+}
