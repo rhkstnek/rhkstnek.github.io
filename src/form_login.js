@@ -59,13 +59,13 @@ const Login = () => {
         <div className='form' >
           <div className="row">
             <i className="fas fa-user"></i>
-            <input type="text" placeholder="Email" onChange={(event) => {
+            <input type="text" placeholder="admin123@gmail.com" onChange={(event) => {
               setLoginEmail(event.target.value)
             }} />
           </div>
           <div className="row">
             <i className="fas fa-lock"></i>
-            <input type="password" placeholder="Password" onChange={(event) => {
+            <input type="password" placeholder="admin123" onChange={(event) => {
               setLoginPassword(event.target.value)
             }} />
           </div>

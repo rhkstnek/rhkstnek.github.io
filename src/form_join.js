@@ -50,23 +50,6 @@ const Join = () => {
           </div>
           <div className="signup-link">Are you a member?  <Link to='/login'>Login now</Link></div>
         </div>
-
-
-        {/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */}
-        {/* <div>
-        <h3>로그인</h3>
-        <input type='text' onChange={(event) => {
-          setLoginEmail(event.target.value)
-        }} />
-        <input type='text' onChange={(event) => {
-          setLoginPassword(event.target.value)
-        }} />
-        <button onClick={login}>로근</button>
-        <Link to='/join'>회원가입</Link>
-      </div> */}
-
-        {/* <h4>계정 : {user?.email}</h4> */}
-        {/* <button onClick={logout}>로가웃</button> */}
       </div>
     </div>
   )
