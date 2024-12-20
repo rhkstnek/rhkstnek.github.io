@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import ShopHam from "./shopham";
 
-function Shop0({ product }) {
+function Shop0({ product,ok, setOk }) {
   const { uid } = useParams()
   let nawa = product.find(
     function (e) {
@@ -17,7 +17,7 @@ function Shop0({ product }) {
 
   return (
     <div className="innovation">
-      <ShopHam />
+      <ShopHam setOk={setOk} ok={ok}/>
       <h2>상세페이지</h2>
       <div className='made_area'>
         <div className='ma_left'>

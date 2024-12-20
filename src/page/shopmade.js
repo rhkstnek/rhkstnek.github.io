@@ -2,8 +2,10 @@ import React, { useEffect, useRef, useState, } from 'react'
 import "./innovation.scss"
 import ShopHam from "./shopham";
 import { useNavigate } from 'react-router-dom';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from '../firebase-config';
 
-const ShopMade = ({ setProduct, product, idNum, setIdNum, id, setId }) => {
+const ShopMade = ({ product, idNum, setIdNum, id, setId }) => {
   const [imgFile, setImgFile] = useState("");
   const imgRef = useRef();
 
@@ -21,6 +23,16 @@ const ShopMade = ({ setProduct, product, idNum, setIdNum, id, setId }) => {
       setImgFile(reader.result);
     };
   };
+
+  let [새로운, set새로운] = useState('')
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        새로운 = user.uid
+        set새로운(새로운)
+      }
+    })
+  }, [auth]);
 
   let [aa, setA] = useState('');
   let [bb, setB] = useState('');
@@ -72,11 +84,11 @@ const ShopMade = ({ setProduct, product, idNum, setIdNum, id, setId }) => {
               setCol('#fff')
               if (window.confirm('등록 하시겠습니까??')) {
                 product.push(
-                  { id: idNum, thumb: imgFile, title: aa, price: bb, doc: cc, address: dd }
+                  { id: idNum, thumb: imgFile, title: aa, price: bb, doc: cc, address: dd, 프라이빗:새로운}
                 )
                 setId(idNum)
                 setIdNum(idNum+1)
-                console.log(idNum, id)
+                // console.log(idNum, id)
                 alert('등록완료')
                 mov()
               } else {
@@ -89,6 +101,7 @@ const ShopMade = ({ setProduct, product, idNum, setIdNum, id, setId }) => {
           }}
           >등록</button>
         </div>
+        {/* {console.log(product)} */}
       </form>
     </div>
   )

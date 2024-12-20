@@ -7,7 +7,6 @@ import axios from "axios"
 
 const Shop = ({ product}) => {
   const [look, setLook] = useState(false); // 햄버거
-
   return (
     <div className="innovation">
       <ShopHam />

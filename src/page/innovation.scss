@@ -30,14 +30,33 @@
     text-align: center;
     background-color: #e8b10c;
     z-index: 1;
-    ul, li{padding-left: 0; margin-bottom: 0;}
+    ul, li{padding-left: 0; margin-bottom: 0; }
+    li{border-top: 1px double #fff;}
+    li:first-child{background-color: #fff; border-radius:10px 10px 0 0;
+    border:1px solid #e8b10c ; padding: 8px 4px; border-top: 0;}
+    li:nth-child(2){border-top: 0;}
+    li:first-child p{color: #e8b10c; }
+    li:first-child p:first-child{font-weight: 600; padding-bottom: 5px;
+      word-break: keep-all;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      word-break: break-all;
+      position: relative;
+      padding-right: 15px;
+      span{
+        position: absolute;
+        right: 5px;
+        font-weight: 300;
+      }
+    }
     li:first-child a{border-top: 0;}
     a{
       color: #fff;
       text-decoration:none;
       padding: 8px 0;
       display: block;
-      border-top: 1px double #fff;
+      
     }
   }
   .pro_list {
@@ -151,13 +170,11 @@
 //     margin: 10px 0;
 //   }
 // }
-.myList{padding-top: 25px;}
-.myList > li:nth-child(odd){
-  background-color: #3578b6;
-  background-color: #e8b10c;
+.myList{padding-top: 25px; max-width: 1024px; margin: 0 auto;}
+.myList > li:nth-child(odd)> div{
   background-color: #000;
 }
-.myList > li { display: flex; justify-content: space-evenly;
+.myList > li >div{ display: flex; justify-content: space-evenly;
   // background: #141517;
   background: #636363;
   align-items: center;
@@ -165,14 +182,21 @@
   padding: 10px 0;
   color: #fff;
 }
-.myList > li a, .myList > li button{color: #fff;}
-.myList > li a img{width: 90px; height: 90px; border-radius: 5px;
+.myList > li >div a, .myList > li >div button{color: #fff;}
+.myList > li >div a img{width: 80px; height: 80px; border-radius: 5px;
 transition: 0.3s; overflow: hidden;}
-.myList > li a img:hover{transform: scale(1.1);}
-.myList > li a img.mod:hover{transform: none;}
-.myList > li img.mod{width: 25px; height: 25px; }
-.myList > li span{width: 20%; text-align: center;}
-.myList > li div{width: 20%; text-align: center;}
+.myList > li >div a img:hover{transform: scale(1.1);}
+.myList > li >div a img.mod:hover{transform: none;}
+.myList > li >div img.mod{width: 25px; height: 25px; }
+.myList > li >div span{width: 20%; text-align: center;}
+.myList > li >div div{width: 20%; text-align: center;}
+
+.myList + b{display: none;}
+.myList + b.boim{display: block;}
+
+// .myList > li:nth-child(2) > b{display: block;}
+b{text-align: center;
+margin-top: 25px; font-weight: 500; font-size: 20px;}
 
 .loginButton {
   margin-top: 10px;
@@ -330,10 +354,10 @@ transition: 0.3s; overflow: hidden;}
   .myList{ padding: 10px 5px 0;}
   .myList > li{margin: 2px 0;}
   .myList > li span{width: 25%; font-size:15px}
-  .myList > li span:nth-last-child(-n+2){width: 32px;}
-  .myList > li div{font-size: 13px; width: 25%;}
-  .myList > li div:nth-last-child(-n+2){width: 32px;}
-  .myList > li a img{width: 80px; height: 100%; }
+  .myList > li span:nth-last-child(-n+2){width: 35px;}
+  .myList > li div{font-size: 12px; width: 25%;}
+  .myList > li div:nth-last-child(-n+2){width: 35px;}
+  .myList > li a img{width: 60px; height: 60px; }
   .myList > li img.mod{width: 15px; height: 15px;}
 
   // 로그인

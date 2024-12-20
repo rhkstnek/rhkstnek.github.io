@@ -2,8 +2,10 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useParams, Link, useNavigate } from "react-router-dom";
 import "./innovation.scss"
 import ShopHam from "./shopham";
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from '../firebase-config';
 
-const Modify = ({ product, idNum, setIdNum, id, setId }) => {
+const Modify = ({ product, id }) => {
   const { uid } = useParams()
   let nawa = product.find(
     function (e) {
@@ -49,6 +51,16 @@ const Modify = ({ product, idNum, setIdNum, id, setId }) => {
     dd = e.target.value; setD(dd)
   }
 
+  let [새로운, set새로운] = useState('')
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        새로운 = user.uid
+        set새로운(새로운)
+      }
+    })
+  }, [auth]);
+
   
   return (
     <div className='innovation'>
@@ -85,7 +97,7 @@ const Modify = ({ product, idNum, setIdNum, id, setId }) => {
                 {
                   id: id, 
                   thumb: imgFile ? `${imgFile}`: `${nawa.thumb}`,
-                  title: aa, price: bb, doc: cc, address: dd
+                  title: aa, price: bb, doc: cc, address: dd, 프라이빗:새로운
                 }
               }
               setTimeout(() => {

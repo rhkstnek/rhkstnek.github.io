@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import "./innovation.scss"
 import { Link } from 'react-router-dom';
-import { auth } from '../firebase-config';
+import { auth, db } from '../firebase-config';
 import { signOut, onAuthStateChanged } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 
-const ShopHam = ({product}) => {
 
+const ShopHam = ({ product }) => {
   const [look, setLook] = useState(false);
 
   // 로그아웃
@@ -15,24 +15,27 @@ const ShopHam = ({product}) => {
   }
 
   let backpage = useNavigate();
-  let mov = () => {backpage('/login')}
+  let mov = () => { backpage('/login') }
+
+  // 로그인이름
+  let [output, setOutput] = useState()
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        console.log("로그인 상태")
-        
+        // console.log('로그인')
+        // console.log(user)
+        setOutput(user)
       } else {
-        console.log("로그아웃 상태")
+        // console.log("로그아웃 상태")
         mov()
       }
-      // setUser(true)
     })
   }, [auth]);
 
-  return(
+  return (
     <>
-    <div className="ham_box">
+      <div className="ham_box">
         <button onClick={() => {
           if (look === false) {
             setLook(true)
@@ -44,7 +47,10 @@ const ShopHam = ({product}) => {
         </button>
         {look == true ? <div className="info">
           <ul>
-            
+            <li>
+              <p style={{ wordBreak: "break-word" }}>{output.displayName}<span>님</span> </p>
+              <p>반갑습니다.</p>
+            </li>
             <li>
               <Link to='/shop'>상품리스트</Link>
             </li>
@@ -55,7 +61,9 @@ const ShopHam = ({product}) => {
               <Link to='/shopmy'>마이페이지</Link>
             </li>
             <li>
-              <Link onClick={logout}>로그아웃</Link>
+              <Link onClick={logout}>
+                로그아웃
+              </Link>
             </li>
           </ul>
         </div> : ''}
@@ -66,7 +74,7 @@ const ShopHam = ({product}) => {
           <Link to='/shop'>😀 Orange Market</Link>
         </span>
       </div>
-      </>
+    </>
   )
 }
 

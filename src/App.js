@@ -52,15 +52,15 @@ function App() {
 
 
   const [product, setProduct] = useState([
-    { id: 1, thumb: 'https://media.bunjang.co.kr/product/245586385_1_1708447651_w360.jpg', title: '언노운 픽스 자전거', price: 200000, doc: '..', address: '경기도 의정부시' },
-    { id: 2, thumb: 'https://img.hankyung.com/photo/202407/01.37323696.1.jpg', title: '두바이 초콜릿', price: 10000, doc: '유통기한 2024.12.12', address: '경기도 용인시' },
-    { id: 3, thumb: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtb2I-kkcuV_T3FRoW3kWsOzoWExgcYxMgkg&s', title: 'S23울트라 급매', price: 400000, doc: '3사 통신사 기변가능', address: '대구 달서구' },
-    { id: 4, thumb: 'https://img.kr.gcp-karroter.net/origin/article/202409/095d28a9b450dee7f22ea35e5fdb115701dd1fab3d9227b258b888294ecd4b56_0.webp?f=webp&q=82&s=300x300&t=crop', title: '참치캔', price: 15000, doc: '', address: '서울 성동구' },
-    { id: 5, thumb: 'https://img.kr.gcp-karroter.net/origin/article/202409/ea832e329c3464e9919a627310f6bd78e3d5d6f18542d680e8ae4798b4054d73_0.webp?f=webp&q=82&s=300x300&t=crop', title: '샤인머스켓 2kg', price: 10000, doc: '한박스 만원 입니다', address: '강원도 강릉시' },
-    { id: 6, thumb: 'https://img.kr.gcp-karroter.net/origin/article/202409/0d14e8f11603ea491c485fad393350ad69a1b9d13c820715cdc0d3092d62c16d_0.webp?f=webp&q=82&s=300x300&t=crop', title: '풍기인삼 10킬로', price: 50000, doc: '3사 통신사 기변가능', address: '서울 은평구' },
-    { id: 7, thumb: 'https://img.kr.gcp-karroter.net/origin/article/202409/57895d78ae1c5304c292a32391838ccee82149aa733a4c47faf4061fb1aa902c_0.webp?f=webp&q=82&s=300x300&t=crop', title: '쌀 20kg 싸게 가져가실분', price: 35000, doc: '..', address: '인천 연수구' },
+    { id: 1, thumb: 'https://media.bunjang.co.kr/product/245586385_1_1708447651_w360.jpg', title: '언노운 픽스 자전거', price: 200000, doc: '..', address: '경기도 의정부시' ,프라이빗:false},
+    { id: 2, thumb: 'https://img.hankyung.com/photo/202407/01.37323696.1.jpg', title: '두바이 초콜릿', price: 10000, doc: '유통기한 2024.12.12', address: '경기도 용인시' ,프라이빗:false},
+    { id: 3, thumb: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtb2I-kkcuV_T3FRoW3kWsOzoWExgcYxMgkg&s', title: 'S23울트라 급매', price: 400000, doc: '3사 통신사 기변가능', address: '대구 달서구',프라이빗:false },
+    { id: 4, thumb: 'https://img.kr.gcp-karroter.net/origin/article/202409/095d28a9b450dee7f22ea35e5fdb115701dd1fab3d9227b258b888294ecd4b56_0.webp?f=webp&q=82&s=300x300&t=crop', title: '참치캔', price: 15000, doc: '', address: '서울 성동구',프라이빗:false },
+    { id: 5, thumb: 'https://img.kr.gcp-karroter.net/origin/article/202409/ea832e329c3464e9919a627310f6bd78e3d5d6f18542d680e8ae4798b4054d73_0.webp?f=webp&q=82&s=300x300&t=crop', title: '샤인머스켓 2kg', price: 10000, doc: '한박스 만원 입니다', address: '강원도 강릉시' ,프라이빗:false},
+    { id: 6, thumb: 'https://img.kr.gcp-karroter.net/origin/article/202409/0d14e8f11603ea491c485fad393350ad69a1b9d13c820715cdc0d3092d62c16d_0.webp?f=webp&q=82&s=300x300&t=crop', title: '풍기인삼 10킬로', price: 50000, doc: '10kg', address: '서울 은평구' ,프라이빗:false},
+    { id: 7, thumb: 'https://img.kr.gcp-karroter.net/origin/article/202409/57895d78ae1c5304c292a32391838ccee82149aa733a4c47faf4061fb1aa902c_0.webp?f=webp&q=82&s=300x300&t=crop', title: '쌀 20kg 싸게 가져가실분', price: 35000, doc: '..', address: '인천 연수구' ,프라이빗:false},
     // { id: 8, thumb: 'https://img.hankyung.com/photo/202407/01.37323696.1.jpg', title: '두바이 초콜릿', price: 10000, doc: '유통기한 2024.12.12', address: '경기도 용인시' },
-    { id: 8, thumb: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtb2I-kkcuV_T3FRoW3kWsOzoWExgcYxMgkg&s', title: 'S23울트라 급매', price: 400000, doc: '3사 통신사 기변가능', address: '대구 달서구' },
+    { id: 8, thumb: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtb2I-kkcuV_T3FRoW3kWsOzoWExgcYxMgkg&s', title: 'S23울트라 급매', price: 400000, doc: '3사 통신사 기변가능', address: '대구 달서구' ,프라이빗:false},
   ])
 
   let [idNum, setIdNum] = useState(10);
@@ -79,11 +79,11 @@ function App() {
   let [calcL1, setCalcL1] = useState('')
   useEffect(() => { //수치_업뎃
     // 박스표출
-    let look1 = looks1.current.offsetHeight;
-    let calcLook1 = look1;
+    // let look1 = looks1.current.offsetHeight;
+    // let calcLook1 = look1;
     
 
-    setCalcL1(calcLook1)
+    // setCalcL1(calcLook1)
     window.scrollTo({ top: 0 })
     window.addEventListener('scroll', upSrc)
     return () => window.removeEventListener('scroll', upSrc)
@@ -119,12 +119,9 @@ function App() {
           <Link to="/">
             <img src={process.env.PUBLIC_URL + `/img/home2.png`} alt="홈버튼" />
           </Link>
-          <Link to="/login">
+          <Link to="/shop">
             <img src={process.env.PUBLIC_URL + `/img/shop2.png`} alt="중고" />
           </Link>
-          {/* <Link to="/etc">
-            E
-          </Link> */}
         </nav>
         <Routes>
           <Route path="/" element={
@@ -152,8 +149,8 @@ function App() {
                     // (scr) > calcL1
                     scr > 450
                      ? `wrap2 scrolled` : `wrap2`}  >
-                    {console.log(scr)}
-                    {console.log(scr-calcL1)}
+                    {/* {console.log(scr)} */}
+                    {/* {console.log(scr-calcL1)} */}
                     <div className="">
                       <div><h3>History</h3>
                         <div className="intro_wrap">
@@ -240,7 +237,7 @@ function App() {
                         <Link to="/movie">Movie</Link>
                         {/* <Link to="/board">Board</Link> */}
                         <Link to="/last">Weather</Link>
-                        <a href="https://velog.io/@rhkstnek/posts" target="_blank" title="외부로 이동">Vanilla JS</a>
+                        <a href="https://velog.io/@rhkstnek/posts?tag=1.-javascript" target="_blank" title="외부로 이동">Vanilla JS</a>
                       </div>
                       <br /><br />
                     </div>
@@ -402,7 +399,6 @@ function App() {
           {/* 로그인 */}
           <Route path="/login" element={<Login />} />
           <Route path="/join" element={<Join />} />
-
           <Route path="/shop" element={<Shop product={product} id={id} setId={setId} />} />
           <Route path="/shop/shop0/:uid" element={<Shop0 product={product} />} />
           <Route path="/shopmy" element={<ShopMy product={product} id={id} setId={setId} setProduct={setProduct} />} />
