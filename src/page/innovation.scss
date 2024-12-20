@@ -193,9 +193,7 @@ transition: 0.3s; overflow: hidden;}
 
 .myList + b{display: none;}
 .myList + b.boim{display: block;}
-
-// .myList > li:nth-child(2) > b{display: block;}
-b{text-align: center;
+.myList + b{text-align: center;
 margin-top: 25px; font-weight: 500; font-size: 20px;}
 
 .loginButton {
