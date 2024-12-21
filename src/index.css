@@ -569,6 +569,7 @@ border-radius: 50%; padding: 54px 45.33px;
 .first_btm p{font-size: 25px;}
 .first_btm > img{width: 90%;}
 
+.wrap2 > div > div > ul > li img{    width: 12px; height: 12px; margin-right:4px}
 .wrap2 > div{display: block;}
 .wrap2 > div > div > ul{margin-top: 20px;}
 .wrap2 > div > div:last-child{margin: 20px auto 0; margin-left: 0; width: auto;}
@@ -583,7 +584,7 @@ border-radius: 50%; padding: 54px 45.33px;
 .flex-column > div:nth-last-child(-n+3){margin-top: 10px;}
 .flex-column > div{width: 31%;}
 .flex-column > div > a{width: 100%; word-break: keep-all; font-size: 13px;
-  padding: 12px 10px;}
+  padding: 12px 8px; border-radius: 50px;}
 .intro_wrap{width: 200px; margin: 33px auto ; padding: 30px 10px 10px 10px;}
 .intro_wrap strong{font-size: 11px;}
 .intro_wrap em{font-size: 15px;}

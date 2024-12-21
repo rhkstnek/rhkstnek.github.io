@@ -351,12 +351,12 @@ margin-top: 25px; font-weight: 500; font-size: 20px;}
   // 마이페이지(목록
   .myList{ padding: 10px 5px 0;}
   .myList > li{margin: 2px 0;}
-  .myList > li span{width: 25%; font-size:15px}
-  .myList > li span:nth-last-child(-n+2){width: 35px;}
-  .myList > li div{font-size: 12px; width: 25%;}
-  .myList > li div:nth-last-child(-n+2){width: 35px;}
-  .myList > li a img{width: 60px; height: 60px; }
-  .myList > li img.mod{width: 15px; height: 15px;}
+  .myList > li > div span{width: 25%; font-size:15px}
+  .myList > li > div span:nth-last-child(-n+2){width: 35px;}
+  .myList > li > div div{font-size: 12px; width: 25%;}
+  .myList > li > div div:nth-last-child(-n+2){width: 35px;}
+  .myList > li > div a img{width: 60px; height: 60px; }
+  .myList > li > div img.mod{width: 15px; height: 15px;}
 
   // 로그인
   .form_wrap{display: flex;
