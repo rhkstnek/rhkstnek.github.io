@@ -162,10 +162,12 @@ function App() {
                           <img className="intro_pin" src={process.env.PUBLIC_URL + `/img/pin.png`} alt='pin' />
 
                           <span className="clearfix">1. 개인작업 : <b>My Page</b><a href="http://rhkstnek.dothome.co.kr/" target="_blank">이동</a></span>
+                          <br/>
+                          <span className="clearfix">2. 작업중인 : <b>My Page</b><a href="http://rhkstnek.dothome.co.kr/ing" target="_blank">이동</a></span>
                           <hr />
 
                           <div>
-                            <p>2. 회사에서 : <b>Web Site</b></p>
+                            <p>3. 회사에서 : <b>Web Site</b></p>
                             <ul className="intro_list clearfix">
                               <li>국가유산진흥원<a href="https://www.kh.or.kr/kha" target="_blank" title="이동">이동</a></li>
                               <li>전통문화포털<a href="https://www.kculture.or.kr/main/kculture" target="_blank" title="이동">이동</a></li>
