@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./calendar.css">
+  <!-- <script src="./calendar.js" defer></script> -->
+</head>
+
+<body>
+  <div class="calendar">
+    <div class="header">
+      <div class="year-month"></div>
+      <div class="nav">
+        <button class="nav-btn go-prev" onclick="prevBtn()">&lt;</button>
+        <button class="nav-btn go-today" onclick="hyunBtn()">Today</button>
+        <button class="nav-btn go-next" onclick="nextBtn()">&gt;</button>
+      </div>
+    </div>
+    <div class="main">
+      <div class="days">
+        <div class="day">일</div>
+        <div class="day">월</div>
+        <div class="day">화</div>
+        <div class="day">수</div>
+        <div class="day">목</div>
+        <div class="day">금</div>
+        <div class="day">토</div>
+      </div>
+      <div class="dates"></div>
+    </div>
+  </div>
+  
+  <script>
+    // 1. 지난 달 마지막 날짜와 요일
+    // 2. 이번 달 마지막 날짜와 요일입니다.
+    let date = new Date();
+    
+    function abc() {
+      let Year = date.getFullYear();
+      let Month = date.getMonth();
+      
+      document.querySelector('.year-month').textContent = `${Year}년 ${Month+1}월`
+
+      let prevList = new Date(Year, Month, 0);
+      let thisList = new Date(Year, Month+1, 0);
+
+      let prevDate = prevList.getDate();
+      let prevDay = prevList.getDay();
+
+      let thisDate = thisList.getDate();
+      let thisDay = thisList.getDay();
+
+      let prevNum = [];
+      let thisNum = [...Array(thisDate+1).keys()].slice(1)
+      let nextNum = [];
+
+      console.log(prevDay);
+      if(prevDay !==6){
+        for (let i = 0; i < prevDay+1; i++) {
+          prevNum.unshift(prevDate--)
+          // prevDate - i
+        }
+      }
+      console.log(prevNum)
+
+      for (let i = 1; i < 7 - thisDay; i++) {
+        // -thisDay
+        nextNum.push(i)
+      }
+      let dates = prevNum.concat(thisNum,nextNum);
+
+
+
+      dates.forEach( function(date, j) {
+        dates[j] = `<div class="date">${date}</div>`;
+      })
+      // forEach
+
+      document.querySelector('.dates').innerHTML = dates.join('');
+    }
+
+
+    const prevBtn = ()=>{
+      date.setMonth(date.getMonth() -1);
+      abc();
+    }
+
+    const nextBtn = ()=>{
+      date.setMonth(date.getMonth() +1);
+      abc();
+    }
+
+    const hyunBtn = ()=>{
+      date = new Date();
+      abc();
+    }
+
+
+    abc();
+
+    /* console.log(thisNum); */
+  </script>
+</body>
+
+</html>
